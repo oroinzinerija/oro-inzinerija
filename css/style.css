@@ -1,77 +1,92 @@
-<style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #1e1e1e;
-            background: #ffffff;
-            line-height: 1.6;
-        }
+/* Bendras puslapio stilius */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e1e1e;
+    background: #ffffff;
+    line-height: 1.6;
+}
 
-        header {
-                <link rel="stylesheet" href="css/style.css">
-            background: #0f172a;
-            color: #ffffff;
-            padding: 50px 20px;
-        }
+/* Header */
+header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 50px 20px;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
 
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-            opacity: 0.9;
-        }
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
 
-        nav {
-            margin-top: 25px;
-        }
+/* Navigacija */
+nav {
+    margin-top: 25px;
+}
 
-        nav a {
-            color: #ffffff;
-            margin-right: 20px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
+nav a {
+    color: #ffffff;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-        }
+nav a:hover {
+    color: #2563eb;
+}
 
-        h2 {
-            margin-top: 0;
-            font-size: 28px;
-        }
+/* Sekcijos */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            background: #0f172a;
-            color: #ffffff;
-            padding: 14px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
+/* Pavadinimai */
+h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+/* Mygtukai */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-        li {
-            margin-bottom: 10px;
-        }
+/* Sąrašai */
+ul {
+    padding-left: 20px;
+}
 
-        footer {
-            background: #f3f4f6;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 14px;
-            color: #555;
-        }
-    </style><link rel="stylesheet" href="css/style.css">
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #f3f4f6;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Smooth scroll efektas */
+html {
+    scroll-behavior: smooth;
+}
