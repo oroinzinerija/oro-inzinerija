@@ -3,50 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Kontaktai | Oro Inžinerija</title>
-    <meta name="description" content="Susisiekite dėl vėdinimo ir rekuperacijos sprendimų.">
+    <meta name="description" content="Susisiekite su Oro Inžinerija – vėdinimo ir rekuperacijos specialistais visoje Lietuvoje.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>Kontaktai</h1>
+    <div class="logo">Oro Inžinerija</div>
+    <p>Vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje</p>
+
     <nav>
         <a href="index.html">Pagrindinis</a>
         <a href="paslaugos.html">Paslaugos</a>
         <a href="iranga.html">Įranga</a>
         <a href="naudinga.html">Naudinga</a>
+        <a href="apie.html">Apie mus</a>
         <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
 </header>
 
-    <div style="margin-top:40px;">
-    <iframe 
-        src="https://www.google.com/maps?q=Lithuania&output=embed"
-        width="100%" 
-        height="300" 
-        style="border:0; border-radius:10px;" 
-        loading="lazy">
-    </iframe>
-</div>
-
 <section>
-    <h2>Susisiekite</h2>
-    <p><strong>Telefonas:</strong> +370 665 65321</p>
-    <p><strong>El. paštas:</strong> zydrunas.rekuperacija@gmail.com</p>
-    <p>Dirbame visoje Lietuvoje</p>
+    <h2>Susisiekite su mumis</h2>
+    <p>
+        Konsultuojame, projektuojame ir montuojame vėdinimo bei rekuperacijos sistemas
+        visoje Lietuvoje. Susisiekite – atsakysime greitai ir aiškiai.
+    </p>
 
-    <a href="tel:+37066565321" class="btn-primary">Skambinti dabar</a>
-    <form action="https://formspree.io/f/mayvlkzr" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Jūsų vardas" required>
-    <input type="email" name="email" placeholder="El. paštas" required>
-    <input type="tel" name="phone" placeholder="Telefonas">
-    <textarea name="message" placeholder="Trumpai aprašykite poreikį" required></textarea>
-    <button type="submit" class="btn-primary">Siųsti užklausą</button>
-</form>
-
+    <ul>
+        <li><strong>Telefonas:</strong> +370 665 65321</li>
+        <li><strong>El. paštas:</strong> zydrunas.rekuperacija@gmail.com</li>
+        <li><strong>Regionas:</strong> Visa Lietuva</li>
+    </ul>
 </section>
 
-<footer>© 2025 Oro Inžinerija</footer>
+<section>
+    <h2>Užklausos forma</h2>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Jūsų vardas" required>
+        <input type="email" placeholder="El. paštas" required>
+        <input type="tel" placeholder="Telefonas">
+        <textarea placeholder="Trumpai aprašykite poreikį"></textarea>
+        <button type="submit" class="btn-primary">Siųsti užklausą</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Oro Inžinerija
+</footer>
+
 </body>
 </html>
