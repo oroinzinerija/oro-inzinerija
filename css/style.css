@@ -8,6 +8,7 @@
         }
 
         header {
+                <link rel="stylesheet" href="css/style.css">
             background: #0f172a;
             color: #ffffff;
             padding: 50px 20px;
