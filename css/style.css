@@ -74,7 +74,7 @@ header {
 /* ========== HERO ========== */
 .hero {
     background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
-        url("../img/hero-vedinimas.jpg") center/cover no-repeat;
+        url("../img/titulinis.jpg") center/cover no-repeat;
     min-height: 90vh;
     display: flex;
     justify-content: center;
