@@ -249,3 +249,57 @@ footer {
     color: #334155;
     margin-bottom: 20px;
 }
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(
+        rgba(15, 23, 42, 0.75),
+        rgba(15, 23, 42, 0.75)
+    ),
+    url("../img/hero-vedinimas.jpg") center/cover no-repeat;
+
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #0f172a;
+}
+
