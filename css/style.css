@@ -1,1 +1,76 @@
-<link rel="stylesheet" href="css/style.css">
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1e1e1e;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #f3f4f6;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style><link rel="stylesheet" href="css/style.css">
