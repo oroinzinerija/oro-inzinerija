@@ -1,69 +1,52 @@
 /* =========================
-   GLOBAL
-========================= */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: 'Inter', Arial, sans-serif;
-    color: #1f2937;
-    background: #f8fafc;
-    line-height: 1.7;
-}
-
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* =========================
    HEADER
 ========================= */
 header {
-    background: #0f172a;
+    display: flex;
+    justify-content: space-between; /* logotipas kairėje, nav dešinėje */
+    align-items: center;
+    background: #0f172a; /* tamsiai mėlyna fono spalva */
     color: #ffffff;
-    padding: 60px 20px 40px;
-    text-align: center;
-    position: sticky;
+    padding: 20px 40px; /* viršus/apačia, kairė/dešinė */
+    position: sticky; /* kad būtų visada matomas */
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* lengva šešėlio linija apačioje */
 }
 
-header .logo {
-    font-size: 44px;
+/* Kairysis blokas su logotipu ir pavadinimu */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* tarpas tarp logotipo ir pavadinimo */
+}
+
+.logo {
+    height: 50px; /* aukštis logotipui */
+    width: auto;
+    border-radius: 6px; /* jei nori suapvalintų kampų */
+}
+
+.site-name {
+    font-size: 28px;
     font-weight: 700;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
-header p {
-    font-size: 18px;
-    margin-top: 10px;
-    opacity: 0.85;
-}
-
-nav {
-    margin-top: 30px;
-}
-
+/* Navigacijos stiliai */
 nav a {
     color: #ffffff;
-    margin: 0 16px;
+    margin: 0 12px;
     font-weight: 600;
     font-size: 15px;
     padding: 6px 14px;
     border-radius: 6px;
-    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background: #1d4ed8;
+    background: #1d4ed8; /* mėlynas hover efektas */
     transform: translateY(-2px);
 }
 
@@ -75,228 +58,31 @@ nav a.btn:hover {
     background: #1d4ed8;
 }
 
-/* =========================
-   HERO
-========================= */
-.hero {
-    background:
-        linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)),
-        url("../img/titulinis.png") center/cover no-repeat;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 40px 20px;
-}
-
-.hero-content {
-    max-width: 900px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 35px;
-    opacity: 0.9;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-section {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 50px 30px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #0f172a;
-}
-
-section p,
-section li {
-    font-size: 16px;
-    color: #334155;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.btn-primary {
-    display: inline-block;
-    margin-top: 25px;
-    background: #2563eb;
-    color: #ffffff;
-    padding: 14px 30px;
-    font-weight: 600;
-    border-radius: 6px;
-}
-
-.btn-primary:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    padding: 14px 28px;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-.btn-outline:hover {
-    background: #ffffff;
-    color: #0f172a;
-}
-
-/* =========================
-   LISTS
-========================= */
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 12px;
-}
-
-/* =========================
-   IMAGE SECTIONS
-========================= */
-.section-img {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.section-img img {
-    width: 280px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-
-.section-img img:hover {
-    transform: scale(1.07);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   CARDS
-========================= */
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    padding: 30px 20px;
-    width: 260px;
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.card img {
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 20px;
-    color: #0f172a;
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 15px;
-    color: #334155;
-}
-
-/* =========================
-   CONTACT FORM
-========================= */
-.contact-form {
-    max-width: 600px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 14px;
-    border-radius: 6px;
-    border: 1px solid #cbd5f5;
-    font-size: 15px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    background: #e2e8f0;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 14px;
-    color: #475569;
-    margin-top: 60px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
+/* Responsive – mažesniems ekranams */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .header-left {
+        margin-bottom: 15px;
+    }
+
     nav a {
         display: block;
-        margin: 10px 0;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    section {
-        padding: 40px 20px;
+        margin: 8px 0;
     }
 }
 
 @media (max-width: 480px) {
-    .hero p {
-        font-size: 18px;
+    .site-name {
+        font-size: 22px;
     }
 
-    section h2 {
-        font-size: 26px;
+    nav a {
+        font-size: 14px;
+        padding: 5px 10px;
     }
 }
