@@ -1,2 +1,2 @@
 # oro-inzinerija
-Vėdinimo ir rekuperacijos paslaugos Kaune ir Vilniuje
+Vėdinimo ir rekuperacijos paslaugos visoje Lietuvoje
