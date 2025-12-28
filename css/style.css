@@ -22,8 +22,8 @@ header {
 }
 
 .logo {
-    height: 15px; /* aukštis logotipui */
-      width: 15px;  /* plotis – koreguok pagal poreikį */
+    height: 25px; /* aukštis logotipui */
+      width: 25px;  /* plotis – koreguok pagal poreikį */
     width: auto;
     border-radius: 6px; /* jei nori suapvalintų kampų */
 }
