@@ -1,20 +1,34 @@
 /* =========================
    HEADER
 ========================= */
+<header>
+    <div class="header-left">
+        <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
+        <div class="site-name">Oro Inžinerija</div>
+    </div>
+    <nav class="header-nav">
+        <a href="index.html">Pagrindinis</a>
+        <a href="paslaugos.html">Paslaugos</a>
+        <a href="iranga.html">Įranga</a>
+        <a href="naudinga.html">Naudinga</a>
+        <a href="apie.html">Apie mus</a>
+        <a href="kontaktai.html" class="btn">Kontaktai</a>
+    </nav>
+</header>
+
 header {
     display: flex;
     justify-content: space-between; /* logotipas kairėje, nav dešinėje */
     align-items: center;
-    background: #0f172a; /* tamsiai mėlyna fono spalva */
+    padding: 15px 30px;
+    background: #0f172a;
     color: #ffffff;
-    padding: 20px 40px; /* viršus/apačia, kairė/dešinė */
-    position: sticky; /* kad būtų visada matomas */
+    position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* lengva šešėlio linija apačioje */
 }
 
-/* Kairysis blokas su logotipu ir pavadinimu */
+/* Kairė pusė: logo + pavadinimas */
 .header-left {
     display: flex;
     align-items: center;
@@ -22,68 +36,65 @@ header {
 }
 
 .logo {
-    height: 35px; /* aukštis logotipui */
-      width: 35px;  /* plotis – koreguok pagal poreikį */
-    width: auto;
-    border-radius: 6px; /* jei nori suapvalintų kampų */
+    width: 60px; /* koreguok pagal poreikį */
+    height: auto;
 }
 
 .site-name {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    font-family: 'Inter', Arial, sans-serif;
 }
 
-/* Navigacijos stiliai */
-nav a {
+/* Nav baras dešinėje */
+.header-nav a {
     color: #ffffff;
-    margin: 0 12px;
+    margin-left: 20px;
     font-weight: 600;
-    font-size: 15px;
-    padding: 6px 14px;
-    border-radius: 6px;
     text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
-nav a:hover {
-    background: #1d4ed8; /* mėlynas hover efektas */
+.header-nav a:hover {
+    background: #1d4ed8;
     transform: translateY(-2px);
 }
 
-nav a.btn {
+.header-nav .btn {
     background: #2563eb;
+    color: #ffffff;
 }
 
-nav a.btn:hover {
+.header-nav .btn:hover {
     background: #1d4ed8;
 }
 
-/* Responsive – mažesniems ekranams */
+/* =========================
+   RESPONSYVUS HEADER
+========================= */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px;
+        gap: 10px;
     }
-
+    
+    .header-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
     .header-left {
-        margin-bottom: 15px;
+        gap: 10px;
     }
-
-    nav a {
-        display: block;
-        margin: 8px 0;
-    }
-}
-
-@media (max-width: 480px) {
+    
     .site-name {
-        font-size: 22px;
+        font-size: 20px;
     }
-
-    nav a {
-        font-size: 14px;
-        padding: 5px 10px;
+    
+    .header-nav a {
+        margin-left: 0;
     }
 }
