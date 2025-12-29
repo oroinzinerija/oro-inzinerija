@@ -75,11 +75,11 @@ body {
 .hero {
   background: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)),
               url('../img/titulinis.png') center/cover no-repeat;
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
