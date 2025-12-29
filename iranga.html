@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-<meta charset="UTF-8">
-<title>Paslaugos – Oro Inžinerija</title>
-<meta name="description" content="Rekuperacijos projektavimas, montavimas ir priežiūra visoje Lietuvoje.">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Rekuperatoriai ir įranga | Oro Inžinerija</title>
+  <meta name="description" content="Zehnder, Brink, Komfovent rekuperatoriai. Kainos, savybės, nauda.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-flex">
-
     <div class="logo-box">
-      <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
+      <img src="img/logo.jpg" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
-    <!-- BURGER -->
     <div class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
 
-    <!-- MENU -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
       <a href="iranga.html">Įranga</a>
-      <a href="darbai.html">Atlikti darbai</a>
-      <a href="naudinga.html">Naudinga</a>
-      <a href="apie.html">Apie mus</a>
       <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
-
   </div>
 </header>
+
 <section class="container">
-<h1>Vėdinimo ir rekuperacijos paslaugos</h1>
+  <h1>Rekuperatoriai ir vėdinimo įranga</h1>
 
-<h2>Projektavimas</h2>
-<p>Atliekame oro srautų skaičiavimus, parenkame efektyvius sprendimus.</p>
+  <div class="cards-container">
 
-<h2>Montavimas</h2>
-<p>Profesionalus montavimas gyvenamuosiuose ir komerciniuose objektuose.</p>
+    <div class="card">
+      <img src="img/zehnder.jpg" alt="Zehnder rekuperatorius">
+      <h3>Zehnder ComfoAir Q350</h3>
+      <p>
+        ✔ Našumas: iki 350 m³/h<br>
+        ✔ Itin tylus veikimas<br>
+        ✔ Aukštas šilumos grąžinimas
+      </p>
+      <p><strong>Kaina nuo: 1 700 €</strong></p>
+      <p><em>Nauda:</em> mažesnės šildymo sąnaudos, švarus oras, ilgaamžiškumas.</p>
+    </div>
 
-<h2>Priežiūra</h2>
-<p>Filtrų keitimas, balansavimas, gedimų šalinimas.</p>
+    <div class="card">
+      <img src="img/brink.jpg" alt="Brink rekuperatorius">
+      <h3>Brink Renovent Excellent 400</h3>
+      <p>
+        ✔ Našumas: iki 400 m³/h<br>
+        ✔ Patikimas Olandų gamintojas<br>
+        ✔ Paprasta priežiūra
+      </p>
+      <p><strong>Kaina nuo: 1 600 €</strong></p>
+      <p><em>Nauda:</em> patikima sistema namams ir kotedžams.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/komfovent.jpg" alt="Komfovent rekuperatorius">
+      <h3>Komfovent Domekt R 400</h3>
+      <p>
+        ✔ Lietuviškas gamintojas<br>
+        ✔ Platus serviso tinklas<br>
+        ✔ Aukštas efektyvumas
+      </p>
+      <p><strong>Kaina nuo: 1 500 €</strong></p>
+      <p><em>Nauda:</em> optimalus kainos ir kokybės santykis.</p>
+    </div>
+
+  </div>
 </section>
 
 <footer>© 2025 Oro Inžinerija</footer>
-  <script>
-function toggleMenu() {
-  document.getElementById("mainNav").classList.toggle("active");
-}
-</script>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
 
-  burger.addEventListener("click", function () {
-    menu.classList.toggle("active");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("burger").addEventListener("click", function () {
+    document.getElementById("main-menu").classList.toggle("active");
   });
 });
 </script>
+
 </body>
 </html>
