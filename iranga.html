@@ -12,17 +12,20 @@
 <header class="site-header">
   <div class="container header-flex">
 
+    <!-- LOGO -->
     <div class="logo-box">
       <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
+    <!-- BURGER (MOBILE) -->
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
+    <!-- NAV -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -39,8 +42,10 @@
   <div class="content-intro">
     <h1>Rekuperatoriai ir vėdinimo įranga</h1>
     <p>
-      Dirbame tik su patikimų gamintojų įranga, kuri užtikrina efektyvų vėdinimą, tylų veikimą ir energijos taupymą. 
-      Parenkame sprendimus pagal konkrečius objekto poreikius, užtikrindami komfortą ir ilgalaikį patikimumą.
+      Dirbame tik su patikimų gamintojų rekuperacijos įranga,
+      kuri užtikrina efektyvų vėdinimą, tylų veikimą ir mažesnes
+      šildymo sąnaudas. Parenkame sprendimus pagal konkrečius
+      objekto poreikius.
     </p>
   </div>
 
@@ -50,11 +55,12 @@
       <img src="img/zehnder.jpg" alt="Zehnder rekuperatorius">
       <h3>Zehnder ComfoAir Q350</h3>
       <p>
-        Aukštos klasės Šveicarijos gamintojo rekuperatorius, skirtas individualiems namams ir kotedžams. 
+        Aukštos klasės Šveicarijos gamintojo rekuperatorius,
+        skirtas individualiems namams ir kotedžams.
         Pasižymi itin tyliu veikimu ir aukštu šilumos grąžinimu.
       </p>
       <ul>
-        <li>✔ Oro našumas: iki 350 m³/h</li>
+        <li>✔ Oro našumas – iki 350 m³/h</li>
         <li>✔ Labai tylus veikimas</li>
         <li>✔ Aukštas energinis efektyvumas</li>
       </ul>
@@ -66,26 +72,29 @@
       <img src="img/brink.jpg" alt="Brink rekuperatorius">
       <h3>Brink Renovent Excellent 400</h3>
       <p>
-        Patikimas Olandijos gamintojo rekuperatorius, tinkantis naujos statybos ir renovuojamiems pastatams. 
-        Užtikrina stabilų veikimą ir paprastą priežiūrą.
+        Patikimas Olandijos gamintojo rekuperatorius,
+        puikiai tinkantis tiek naujos statybos,
+        tiek renovuojamiems pastatams.
       </p>
       <ul>
-        <li>✔ Oro našumas: iki 400 m³/h</li>
-        <li>✔ Ilgametis patikimumas</li>
+        <li>✔ Oro našumas – iki 400 m³/h</li>
+        <li>✔ Patikrintas ilgametis patikimumas</li>
         <li>✔ Lengva priežiūra ir aptarnavimas</li>
       </ul>
       <p><strong>Kaina nuo: 1 600 €</strong></p>
-      <p><em>Nauda:</em> patikimas sprendimas šeimos namams, paprasta eksploatacija, komfortas visus metus.</p>
+      <p><em>Nauda:</em> stabilus veikimas, paprasta eksploatacija ir patikimas sprendimas šeimos namams.</p>
     </div>
 
     <div class="card">
       <img src="img/komfovent.jpg" alt="Komfovent rekuperatorius">
       <h3>Komfovent Domekt R 400</h3>
       <p>
-        Lietuviško gamintojo rekuperatorius, vertinamas dėl gero kainos ir kokybės santykio bei plataus serviso tinklo visoje Lietuvoje.
+        Lietuviško gamintojo rekuperatorius,
+        vertinamas dėl gero kainos ir kokybės santykio
+        bei plataus serviso tinklo visoje Lietuvoje.
       </p>
       <ul>
-        <li>✔ Oro našumas: iki 400 m³/h</li>
+        <li>✔ Oro našumas – iki 400 m³/h</li>
         <li>✔ Aukštas šilumos atgavimo efektyvumas</li>
         <li>✔ Patogus aptarnavimas ir servisas</li>
       </ul>
@@ -98,16 +107,18 @@
 
 <footer>© 2025 Oro Inžinerija</footer>
 
+<!-- ================= JS BURGER ================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
+  // Patikrintas burger menu veikiantis JS
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('main-menu');
+
   if (burger && menu) {
-    burger.addEventListener("click", function () {
-      menu.classList.toggle("active");
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      burger.classList.toggle('open'); // jei norėsi animaciją burger ikonai
     });
   }
-});
 </script>
 
 </body>
