@@ -194,3 +194,38 @@ footer {
     display: flex;
   }
 }
+
+/* CONTACT FORM */
+form {
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+}
+
+form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+form button {
+  background: #22c55e;
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #16a34a;
+}
