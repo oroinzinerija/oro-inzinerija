@@ -70,6 +70,15 @@
 <footer>
   © 2025 Oro Inžinerija
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("main-menu");
 
+  burger.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
+});
+</script>
 </body>
 </html>
