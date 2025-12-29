@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <meta charset="UTF-8">
-    <title>Kontaktai | Oro Inžinerija</title>
-    <meta name="description" content="Susisiekite su Oro Inžinerija – vėdinimo ir rekuperacijos specialistais visoje Lietuvoje.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Vėdinimo ir rekuperacijos paslaugos | Oro Inžinerija</title>
+  <meta name="description" content="Profesionalus rekuperacijos projektavimas, montavimas ir priežiūra visoje Lietuvoje.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-flex">
-
     <div class="logo-box">
-      <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
+      <img src="img/logo.jpg" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
-    <!-- BURGER -->
     <div class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
 
-    <!-- MENU -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
       <a href="iranga.html">Įranga</a>
       <a href="darbai.html">Atlikti darbai</a>
-      <a href="naudinga.html">Naudinga</a>
-      <a href="apie.html">Apie mus</a>
       <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
-
   </div>
 </header>
 
-<section>
-    <h2>Susisiekite su mumis</h2>
+<section class="container">
+  <h1>Vėdinimo ir rekuperacijos paslaugos</h1>
+
+  <div class="card">
+    <h2>Rekuperacijos sistemų projektavimas</h2>
     <p>
-        Konsultuojame, projektuojame ir montuojame vėdinimo bei rekuperacijos sistemas
-        visoje Lietuvoje. Susisiekite – atsakysime greitai ir aiškiai.
+      Atliekame individualų vėdinimo ir rekuperacijos sistemų projektavimą
+      pagal patalpų plotą, paskirtį ir gyventojų poreikius.
+      Įvertiname oro srautus, triukšmo lygius, energinį efektyvumą
+      bei pasirenkame optimalų rekuperatorių.
     </p>
-
     <ul>
-        <li><strong>Telefonas:</strong> +370 665 65321</li>
-        <li><strong>El. paštas:</strong> zydrunas.rekuperacija@gmail.com</li>
-        <li><strong>Regionas:</strong> Visa Lietuva</li>
+      <li>✔ Individualūs namai</li>
+      <li>✔ Butai</li>
+      <li>✔ Komercinės patalpos</li>
     </ul>
+  </div>
+
+  <div class="card">
+    <h2>Vėdinimo ir rekuperacijos montavimas</h2>
+    <p>
+      Profesionaliai montuojame rekuperacijos sistemas visoje Lietuvoje.
+      Dirbame tvarkingai, laikomės gamintojų reikalavimų,
+      užtikriname sandarumą ir maksimalų sistemos efektyvumą.
+    </p>
+    <ul>
+      <li>✔ Ortakių montavimas</li>
+      <li>✔ Rekuperatoriaus pajungimas</li>
+      <li>✔ Sistemos balansavimas</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Priežiūra ir techninis aptarnavimas</h2>
+    <p>
+      Atliekame rekuperacijos sistemų techninę priežiūrą:
+      filtrų keitimą, oro srautų balansavimą,
+      gedimų diagnostiką ir šalinimą.
+    </p>
+    <ul>
+      <li>✔ Filtrų keitimas</li>
+      <li>✔ Profilaktinė patikra</li>
+      <li>✔ Konsultacijos</li>
+    </ul>
+  </div>
+
+  <a href="kontaktai.html" class="btn-primary">Užsisakyti paslaugą</a>
 </section>
 
-<section>
-    <h2>Užklausos forma</h2>
+<footer>© 2025 Oro Inžinerija</footer>
 
-   <form action="https://formsubmit.co/zydrunas.rekuperacija@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Vardas" required>
-  <input type="email" name="email" placeholder="El. paštas" required>
-  <input type="hidden" name="_subject" value="Nauja užklausa – Oro Inžinerija">
-  <textarea name="message" placeholder="Žinutė" required></textarea>
-  <button type="submit" class="btn">Siųsti užklausą</button>
-</form>
-</section>
-
-<footer>
-    © 2025 Oro Inžinerija
-</footer>
 <script>
-function toggleMenu() {
-  document.getElementById("mainNav").classList.toggle("active");
-}
-</script>
-    <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
-
-  burger.addEventListener("click", function () {
-    menu.classList.toggle("active");
+  document.getElementById("burger").addEventListener("click", function () {
+    document.getElementById("main-menu").classList.toggle("active");
   });
 });
 </script>
+
 </body>
 </html>
