@@ -66,14 +66,14 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("burger").addEventListener("click", function () {
-    document.getElementById("main-menu").classList.toggle("active");
-  });
-});
-</script>
-<script>
-document.getElementById("burger").addEventListener("click", function () {
-  document.getElementById("main-menu").classList.toggle("active");
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("main-menu");
+
+  if (burger && menu) {
+    burger.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  }
 });
 </script>
 </body>
