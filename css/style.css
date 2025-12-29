@@ -31,7 +31,7 @@ body {
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .logo {
@@ -46,7 +46,7 @@ body {
 }
 
 .site-name {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 700;
 }
 
