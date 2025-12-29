@@ -329,3 +329,18 @@ section.container p {
   max-width: 800px;
   line-height: 1.7;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    background-position: center top;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
