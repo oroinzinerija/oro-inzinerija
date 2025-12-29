@@ -145,17 +145,25 @@ footer {
     height: 180px;
   }
 }
-/* BURGER MENU */
+/* BURGER ICON */
 .burger {
   display: none;
-  font-size: 28px;
-  color: #fff;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
 
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+}
+
+/* MOBILE MENU */
 @media (max-width: 768px) {
+
   .burger {
-    display: block;
+    display: flex;
   }
 
   .header-nav {
@@ -163,12 +171,11 @@ footer {
     flex-direction: column;
     background: #0f172a;
     width: 100%;
-    text-align: center;
     margin-top: 10px;
   }
 
   .header-nav a {
-    padding: 12px;
+    padding: 14px;
     border-top: 1px solid #1e293b;
   }
 
