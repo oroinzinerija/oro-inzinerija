@@ -1,84 +1,67 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-<meta charset="UTF-8">
-<title>Oro Inžinerija – rekuperacija visoje Lietuvoje</title>
-<meta name="description" content="Vėdinimo ir rekuperacijos montavimas visoje Lietuvoje. Projektavimas, montavimas, priežiūra.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Rekuperatoriai ir vėdinimo įranga | Oro Inžinerija</title>
+  <meta name="description" content="Rekuperatoriai, ortakiai, filtrai ir vėdinimo įranga. Kainos, specifikacijos, profesionalus parinkimas.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header>
+<!-- HEADER -->
+<header class="site-header">
   <div class="container header-flex">
-    <img src="img/logo.jpg" class="logo" alt="Oro Inžinerija">
+    <div class="logo-box">
+      <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
+      <span class="site-name">Oro Inžinerija</span>
+    </div>
 
-    <div class="burger" onclick="toggleMenu()">☰</div>
-
-    <nav id="mainNav">
+    <nav class="header-nav">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
       <a href="iranga.html">Įranga</a>
       <a href="naudinga.html">Naudinga</a>
-      <a href="darbai.html">Atlikti darbai</a>
+      <a href="apie.html">Apie mus</a>
       <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-box">
-    <h1>Vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje</h1>
-    <p>Projektavimas • Montavimas • Priežiūra<br>Kaunas • Vilnius • Visa Lietuva</p>
-    <a href="kontaktai.html" class="btn">Gauti pasiūlymą</a>
+<!-- HERO -->
+<section class="page-hero">
+  <h1>Rekuperatoriai ir vėdinimo įranga</h1>
+  <p>Patikima, efektyvi įranga su profesionaliu parinkimu</p>
+</section>
+
+<!-- PRODUKTAI -->
+<section class="container">
+  <div class="cards-container">
+
+    <div class="card product">
+      <h3>Komfovent Domekt R 400</h3>
+      <p>Našumas: iki 400 m³/h<br>Efektyvumas: A+<br>Tinka namams iki 180 m²</p>
+      <strong>Kaina nuo: 1 750 €</strong>
+    </div>
+
+    <div class="card product">
+      <h3>Salda Smarty 3X</h3>
+      <p>Našumas: 300 m³/h<br>EC varikliai<br>Tylus veikimas</p>
+      <strong>Kaina nuo: 1 450 €</strong>
+    </div>
+
+    <div class="card product">
+      <h3>Zehnder ComfoAir Q350</h3>
+      <p>Vokiška kokybė<br>Šilumos grąža iki 95 %</p>
+      <strong>Kaina nuo: 2 300 €</strong>
+    </div>
+
   </div>
 </section>
 
-<section class="container">
-  <h2>Kodėl verta rinktis „Oro Inžineriją“?</h2>
-  <div class="grid-3">
-    <div class="card">✔ Darbai visoje Lietuvoje</div>
-    <div class="card">✔ Techninis tikslumas</div>
-    <div class="card">✔ Patikima įranga</div>
-  </div>
-</section>
-
-<section class="container works">
-  <h2>Mūsų atlikti darbai</h2>
-  <div class="grid-3">
-    <img src="img/IMG_2133.jpeg" alt="Rekuperacijos montavimas">
-    <img src="img/IMG_2133.jpeg" alt="Vėdinimo sistema">
-    <img src="img/IMG_2133.jpeg" alt="Rekuperatorius objekte">
-  </div>
-</section>
-<section class="container">
-<h2>Vėdinimo ir rekuperacijos paslaugos miestuose</h2>
-<p>
-Teikiame profesionalias vėdinimo ir rekuperacijos paslaugas
-Kaune, Vilniuje, Klaipėdoje, Šiauliuose ir visoje Lietuvoje.
-Montuojame efektyvias sistemas individualiems namams ir verslo objektams.
-</p>
-</section>
 <footer>
-© 2025 Oro Inžinerija | Vėdinimo ir rekuperacijos specialistai
+  © 2025 Oro Inžinerija
 </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HVACBusiness",
-  "name": "Oro Inžinerija",
-  "areaServed": "LT",
-  "telephone": "+37066565321",
-  "email": "zydrunas.rekuperacija@gmail.com",
-  "url": "https://oroinzinerija.github.io/oro-inzinerija/"
-}
-</script>
-<script>
-function toggleMenu() {
-  document.getElementById("mainNav").classList.toggle("active");
-}
-</script>
 </body>
 </html>
