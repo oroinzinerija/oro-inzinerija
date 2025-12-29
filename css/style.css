@@ -145,3 +145,34 @@ footer {
     height: 180px;
   }
 }
+/* BURGER MENU */
+.burger {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    background: #0f172a;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .header-nav a {
+    padding: 12px;
+    border-top: 1px solid #1e293b;
+  }
+
+  .header-nav.active {
+    display: flex;
+  }
+}
