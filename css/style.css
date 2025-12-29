@@ -80,10 +80,29 @@ header {
 background: #0f172a;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
 .header-flex {
-display: flex;
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 45px;
+}
+
+.header-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 500;
 }
 
 .logo {
