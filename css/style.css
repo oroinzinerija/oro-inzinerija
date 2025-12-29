@@ -31,11 +31,11 @@ body {
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .logo {
-  width: 70px;        /* kompiuteryje aiškus */
+  width: 75px;        /* kompiuteryje aiškus */
   height: auto;
 }
 
