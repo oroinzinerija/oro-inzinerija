@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <meta charset="UTF-8">
-    <title>Apie mus | Oro Inžinerija</title>
-    <meta name="description" content="Profesionali vėdinimo ir rekuperacijos komanda visoje Lietuvoje.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Apie mus | Oro Inžinerija</title>
+  <meta name="description" content="Profesionali vėdinimo ir rekuperacijos komanda visoje Lietuvoje.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-flex">
 
-    <!-- LOGO -->
     <div class="logo-box">
       <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
-    <!-- BURGER (MOBILE) -->
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- NAV -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -37,40 +34,53 @@
 
   </div>
 </header>
-<section class="services">
-  <h2>Mūsų paslaugos</h2>
 
-  <div class="services-grid">
+<section class="content-section">
+  <div class="content-intro">
+    <h1>Apie mus</h1>
+    <p>
+      „Oro Inžinerija“ – tai patikima vėdinimo ir rekuperacijos sprendimų
+      įmonė, dirbanti visoje Lietuvoje. Mūsų tikslas – ne tik sumontuoti
+      sistemą, bet sukurti ilgalaikį komfortą ir sveiką vidaus klimatą.
+    </p>
+  </div>
 
-    <div class="service-card">
-      <h3>Projektavimas</h3>
+  <div class="content-grid">
+    <div class="content-box">
+      <h2>Patirtis ir kompetencija</h2>
       <p>
-        Atliekame individualų vėdinimo ir rekuperacijos sistemų projektavimą
-        pagal patalpų plotą, paskirtį ir gyventojų poreikius.
+        Turime sukauptą patirtį projektuojant ir montuojant
+        vėdinimo bei rekuperacijos sistemas individualiuose namuose,
+        butuose ir komercinėse patalpose. Sprendimus parenkame
+        atsakingai, remdamiesi techniniais skaičiavimais ir praktika.
       </p>
     </div>
 
-    <div class="service-card">
-      <h3>Montavimas</h3>
+    <div class="content-box">
+      <h2>Atsakingas požiūris</h2>
       <p>
-        Profesionalus rekuperacijos sistemų montavimas visoje Lietuvoje,
-        laikantis gamintojų reikalavimų ir statybos normų.
+        Kiekvienas projektas mums yra individualus.
+        Vertiname aiškią komunikaciją, terminų laikymąsi
+        ir tvarkingą darbą objekte. Siekiame, kad klientas
+        jaustųsi užtikrintas kiekviename etape.
       </p>
     </div>
 
-    <div class="service-card">
-      <h3>Priežiūra ir aptarnavimas</h3>
+    <div class="content-box">
+      <h2>Ilgalaikė vertė</h2>
       <p>
-        Filtrų keitimas, oro srautų balansavimas, diagnostika
-        ir konsultacijos.
+        Orientuojamės į sprendimus, kurie veikia patikimai
+        daugelį metų. Todėl siūlome ne tik montavimą,
+        bet ir techninę priežiūrą, konsultacijas bei
+        pagalbą eksploatacijos metu.
       </p>
     </div>
-
   </div>
 </section>
 
 <footer>© 2025 Oro Inžinerija</footer>
-   <script>
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
@@ -82,5 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
+
 </body>
 </html>
