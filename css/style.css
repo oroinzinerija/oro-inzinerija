@@ -35,9 +35,12 @@ body {
 }
 
 .logo {
-  width: 85px;        /* kompiuteryje aiškus */
+  width: 70px;     /* kompiuteryje aiškus */
   height: auto;
-}
+  background: #fff;
+  padding: 6px;
+  border-radius: 6px;
+}       
 
 @media (max-width: 768px) {
   .logo {
