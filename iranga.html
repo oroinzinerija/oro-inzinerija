@@ -2,8 +2,8 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Rekuperatoriai ir įranga | Oro Inžinerija</title>
-  <meta name="description" content="Zehnder, Brink, Komfovent rekuperatoriai. Kainos, savybės, nauda.">
+  <title>Rekuperatoriai ir vėdinimo įranga | Oro Inžinerija</title>
+  <meta name="description" content="Kokybiški Zehnder, Brink ir Komfovent rekuperatoriai. Patikimi sprendimai namams ir verslui.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,20 +12,17 @@
 <header class="site-header">
   <div class="container header-flex">
 
-    <!-- LOGO -->
     <div class="logo-box">
       <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
-    <!-- BURGER (MOBILE) -->
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- NAV -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -38,8 +35,16 @@
   </div>
 </header>
 
-<section class="container">
-  <h1>Rekuperatoriai ir vėdinimo įranga</h1>
+<section class="content-section">
+  <div class="content-intro">
+    <h1>Rekuperatoriai ir vėdinimo įranga</h1>
+    <p>
+      Dirbame tik su patikimų gamintojų rekuperacijos įranga,
+      kuri užtikrina efektyvų vėdinimą, tylų veikimą ir mažesnes
+      šildymo sąnaudas. Parenkame sprendimus pagal konkrečius
+      objekto poreikius.
+    </p>
+  </div>
 
   <div class="cards-container">
 
@@ -47,36 +52,51 @@
       <img src="img/zehnder.jpg" alt="Zehnder rekuperatorius">
       <h3>Zehnder ComfoAir Q350</h3>
       <p>
-        ✔ Našumas: iki 350 m³/h<br>
-        ✔ Itin tylus veikimas<br>
-        ✔ Aukštas šilumos grąžinimas
+        Aukštos klasės Šveicarijos gamintojo rekuperatorius,
+        skirtas individualiems namams ir kotedžams.
+        Pasižymi itin tyliu veikimu ir aukštu šilumos grąžinimu.
       </p>
+      <ul>
+        <li>✔ Oro našumas – iki 350 m³/h</li>
+        <li>✔ Labai tylus veikimas</li>
+        <li>✔ Aukštas energinis efektyvumas</li>
+      </ul>
       <p><strong>Kaina nuo: 1 700 €</strong></p>
-      <p><em>Nauda:</em> mažesnės šildymo sąnaudos, švarus oras, ilgaamžiškumas.</p>
+      <p><em>Nauda:</em> komfortiškas mikroklimatas, mažesnės šildymo išlaidos, ilgaamžis sprendimas.</p>
     </div>
 
     <div class="card">
       <img src="img/brink.jpg" alt="Brink rekuperatorius">
       <h3>Brink Renovent Excellent 400</h3>
       <p>
-        ✔ Našumas: iki 400 m³/h<br>
-        ✔ Patikimas Olandų gamintojas<br>
-        ✔ Paprasta priežiūra
+        Patikimas Olandijos gamintojo rekuperatorius,
+        puikiai tinkantis tiek naujos statybos,
+        tiek renovuojamiems pastatams.
       </p>
+      <ul>
+        <li>✔ Oro našumas – iki 400 m³/h</li>
+        <li>✔ Patikrintas ilgametis patikimumas</li>
+        <li>✔ Lengva priežiūra ir aptarnavimas</li>
+      </ul>
       <p><strong>Kaina nuo: 1 600 €</strong></p>
-      <p><em>Nauda:</em> patikima sistema namams ir kotedžams.</p>
+      <p><em>Nauda:</em> stabilus veikimas, paprasta eksploatacija ir patikimas sprendimas šeimos namams.</p>
     </div>
 
     <div class="card">
       <img src="img/komfovent.jpg" alt="Komfovent rekuperatorius">
       <h3>Komfovent Domekt R 400</h3>
       <p>
-        ✔ Lietuviškas gamintojas<br>
-        ✔ Platus serviso tinklas<br>
-        ✔ Aukštas efektyvumas
+        Lietuviško gamintojo rekuperatorius,
+        vertinamas dėl gero kainos ir kokybės santykio
+        bei plataus serviso tinklo visoje Lietuvoje.
       </p>
+      <ul>
+        <li>✔ Oro našumas – iki 400 m³/h</li>
+        <li>✔ Aukštas šilumos atgavimo efektyvumas</li>
+        <li>✔ Patogus aptarnavimas ir servisas</li>
+      </ul>
       <p><strong>Kaina nuo: 1 500 €</strong></p>
-      <p><em>Nauda:</em> optimalus kainos ir kokybės santykis.</p>
+      <p><em>Nauda:</em> optimalus pasirinkimas ieškantiems patikimo sprendimo už protingą kainą.</p>
     </div>
 
   </div>
@@ -91,10 +111,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (burger && menu) {
     burger.addEventListener("click", function () {
-      menu.classList.toggle("active");
-    });
-  }
-});
-</script>
-</body>
-</html>
