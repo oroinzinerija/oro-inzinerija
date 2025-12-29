@@ -29,6 +29,23 @@ color: #1e293b;
 .works img:hover {
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .hero-box {
+    padding: 25px;
+  }
+
+  .hero-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-box p {
+    font-size: 1rem;
+  }
+
+  .works img {
+    height: 180px;
+  }
+}
 @media (max-width: 900px) {
   nav {
     display: none;
