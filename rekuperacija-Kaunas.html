@@ -2,27 +2,22 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Oro Inžinerija – Rekuperacija Kaune</title>
-  <meta name="description" content="Rekuperacijos ir vėdinimo sprendimai Kaune – projektavimas, montavimas, priežiūra.">
+  <title>Rekuperatoriai ir vėdinimo įranga | Oro Inžinerija</title>
+  <meta name="description" content="Platus rekuperatorių pasirinkimas su kainomis, efektyvumu ir našumu. Zehnder, Brink, DucoBox, Itho ir kt.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-box">
       <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
-
     <div class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
-
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -34,67 +29,126 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Rekuperacija Kaune</h1>
-    <p>Projektavimas • Montavimas • Priežiūra</p>
-    <div class="hero-buttons">
-      <a href="kontaktai.html" class="btn-primary">Gauti pasiūlymą Kaune</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="services">
+<section class="content-section">
   <div class="container">
-    <div class="section-intro">
-      <h2>Kauno rekuperacijos sprendimai</h2>
-      <p>Profesionalūs sprendimai vėdinimui ir rekuperacijai Kaune.</p>
+    <div class="content-intro">
+      <h1>Rekuperatoriai ir vėdinimo įranga</h1>
+      <p>Siūlome platų rekuperatorių asortimentą su kainomis, našumo ir efektyvumo duomenimis. Lengvai palyginkite modelius ir pasirinkite optimalų sprendimą savo namams ar verslui.</p>
     </div>
-    <div class="service-grid">
-      <div class="service-item">
-        <img src="img/icons/montavimas.svg" alt="Montavimas" class="service-icon">
-        <h3>Rekuperatoriaus montavimas</h3>
-        <p>Greitas ir profesionalus montavimas su garantija.</p>
+
+    <!-- ================= FILTRAI ================= -->
+    <div class="filters">
+      <div class="filter-group">
+        <label for="manufacturer">Gamintojas</label>
+        <select id="manufacturer">
+          <option value="all">Visi</option>
+          <option value="zehnder">Zehnder</option>
+          <option value="brink">Brink</option>
+          <option value="ducobox">DucoBox</option>
+          <option value="itho">Itho</option>
+          <option value="mini">Mini rekuperatoriai</option>
+        </select>
       </div>
-      <div class="service-item">
-        <img src="img/icons/iranga.svg" alt="Įranga" class="service-icon">
-        <h3>Įrangos pardavimas</h3>
-        <p>Tik patikimos įrangos tiekimas ir konsultacijos.</p>
+      <div class="filter-group">
+        <label for="airflow">Oro srautas</label>
+        <select id="airflow">
+          <option value="all">Visi</option>
+          <option value="0-200">Iki 200 m³/h</option>
+          <option value="200-400">200–400 m³/h</option>
+          <option value="400+">400+ m³/h</option>
+        </select>
       </div>
-      <div class="service-item">
-        <img src="img/icons/prieziura.svg" alt="Priežiūra" class="service-icon">
-        <h3>Priežiūra ir aptarnavimas</h3>
-        <p>Reguliari techninė priežiūra ir sistemų kontrolė.</p>
+      <div class="filter-group">
+        <label for="efficiency">Efektyvumas</label>
+        <select id="efficiency">
+          <option value="all">Visi</option>
+          <option value="high">A klasė ir daugiau</option>
+          <option value="medium">Vidutinis–geras</option>
+        </select>
       </div>
     </div>
+
+    <!-- ================= REKUPERATORIAI ================= -->
+    <div class="content-grid">
+
+      <!-- Zehnder ComfoAir Flex 350 HRV -->
+      <div class="content-box" data-manufacturer="zehnder" data-airflow-min="0" data-airflow-max="400" data-efficiency="high">
+        <img src="img/zehnder-comfoair-flex350.jpg" alt="Zehnder ComfoAir Flex 350 HRV">
+        <h3>Zehnder ComfoAir Flex 350 HRV</h3>
+        <p>Premium klasės vokiškas rekuperatorius su entalpiniu šilumokaičiu. Idealus iki ~200 m².</p>
+        <p><strong>Kaina:</strong> ~2 799 €</p>
+        <p><em>Oro srautas:</em> iki 350 m³/h | <em>Efektyvumas:</em> ~85 %</p>
+      </div>
+
+      <!-- Zehnder ComfoAir Q450 -->
+      <div class="content-box" data-manufacturer="zehnder" data-airflow-min="400" data-airflow-max="500" data-efficiency="high">
+        <img src="img/zehnder-comfoair-q450.jpg" alt="Zehnder ComfoAir Q450">
+        <h3>Zehnder ComfoAir Q450</h3>
+        <p>Galingesnis Zehnder modelis su energijos atgavimu — puikus didesniems objektams.</p>
+        <p><strong>Kaina:</strong> ~2 371–3 018 €</p>
+        <p><em>Oro srautas:</em> ~450 m³/h | <em>Efektyvumas:</em> aukštas (A+)</p>
+      </div>
+
+      <!-- Brink Flair 400 -->
+      <div class="content-box" data-manufacturer="brink" data-airflow-min="200" data-airflow-max="400" data-efficiency="high">
+        <img src="img/brink-flair-400.jpg" alt="Brink Flair 400">
+        <h3>Brink Flair 400</h3>
+        <p>Olandiškas rekuperatorius su geru šilumos grąžinimu ir energijos efektyvumu.</p>
+        <p><strong>Kaina:</strong> ~1 780–2 615 €</p>
+        <p><em>Oro srautas:</em> ~400 m³/h | <em>Efektyvumas:</em> A klasė</p>
+      </div>
+
+      <!-- DucoBox Energy Comfort Plus -->
+      <div class="content-box" data-manufacturer="ducobox" data-airflow-min="300" data-airflow-max="450" data-efficiency="high">
+        <img src="img/ducobox-energy-comfort-plus.jpg" alt="DucoBox Energy Comfort Plus">
+        <h3>DucoBox Energy Comfort Plus</h3>
+        <p>Belgijos gamintojo rekuperatorius su plačiu variantų diapazonu, tylus veikimas.</p>
+        <p><strong>Kaina:</strong> ~1 792–2 360 €</p>
+        <p><em>Oro srautas:</em> 300–450 m³/h | <em>Efektyvumas:</em> geras–aukštas</p>
+      </div>
+
+      <!-- Itho Daalderop HRU ECO 350 HP -->
+      <div class="content-box" data-manufacturer="itho" data-airflow-min="0" data-airflow-max="400" data-efficiency="medium">
+        <img src="img/itho-daalderop-hru-eco350hp.jpg" alt="Itho Daalderop HRU ECO 350 HP">
+        <h3>Itho Daalderop HRU ECO 350 HP</h3>
+        <p>Ekonomiškas rekuperatorius su geru našumu ir energijos atgavimu.</p>
+        <p><strong>Kaina:</strong> ~903 €</p>
+        <p><em>Oro srautas:</em> ~350 m³/h | <em>Efektyvumas:</em> vidutinis–geras</p>
+      </div>
+
+      <!-- Mini rekuperatoriai -->
+      <div class="content-box" data-manufacturer="mini" data-airflow-min="0" data-airflow-max="200" data-efficiency="high">
+        <img src="img/blauberg-solo-a35.jpg" alt="Blauberg Solo A35">
+        <h3>Blauberg Solo A35</h3>
+        <p>Mini rekuperatorius mažoms patalpoms su tylia veikla.</p>
+        <p><strong>Kaina:</strong> ~300–500 €</p>
+        <p><em>Oro srautas:</em> ~40 m³/h | <em>Efektyvumas:</em> ~80–85 %</p>
+      </div>
+
+      <div class="content-box" data-manufacturer="mini" data-airflow-min="0" data-airflow-max="200" data-efficiency="high">
+        <img src="img/mitsubishi-vl50sr2-e.jpg" alt="Mitsubishi VL-50SR2-E">
+        <h3>Mitsubishi Electric VL-50SR2-E</h3>
+        <p>Mini rekuperatorius su A klasės efektyvumu – idealus mažoms erdvėms.</p>
+        <p><strong>Kaina:</strong> ~400–600 €</p>
+        <p><em>Oro srautas:</em> ~50 m³/h | <em>Efektyvumas:</em> ~80–85 %</p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
     <div class="services-cta">
-      <a href="kontaktai.html" class="btn-primary">Užsisakyti paslaugą Kaune</a>
+      <a href="kontaktai.html" class="btn-primary">Sužinoti daugiau / Užsisakyti</a>
     </div>
+
   </div>
 </section>
 
-<!-- ================= TRUST ================= -->
-<section class="trust">
-  <div class="container">
-    <h2>Kodėl verta rinktis „Oro Inžineriją“?</h2>
-    <div class="trust-grid">
-      <div class="trust-item"><h3>Patirtis</h3><p>Daugiau nei 5 metų patirtis vėdinimo ir rekuperacijos srityje.</p></div>
-      <div class="trust-item"><h3>Kokybė</h3><p>Dirbame tik su patikima įranga ir laikomės gamintojų reikalavimų.</p></div>
-      <div class="trust-item"><h3>Garantija</h3><p>Suteikiame garantiją darbams ir sumontuotai sistemai.</p></div>
-      <div class="trust-item"><h3>Visa Lietuva</h3><p>Dirbame visoje Lietuvoje – atvykstame ten, kur reikia.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer>
   © 2025 Oro Inžinerija
 </footer>
 
-<!-- ================= JS BURGER ================= -->
 <script>
+  // Burger menu
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
   if (burger && menu) {
@@ -103,6 +157,43 @@
       burger.classList.toggle("open");
     });
   }
+
+  // ================== FILTRAI ==================
+  const manufacturerSelect = document.getElementById("manufacturer");
+  const airflowSelect = document.getElementById("airflow");
+  const efficiencySelect = document.getElementById("efficiency");
+  const boxes = document.querySelectorAll(".content-box");
+
+  function filterBoxes() {
+    const mVal = manufacturerSelect.value;
+    const aVal = airflowSelect.value;
+    const eVal = efficiencySelect.value;
+
+    boxes.forEach(box => {
+      let show = true;
+
+      // Filtravimas pagal gamintoją
+      if(mVal !== "all" && box.dataset.manufacturer !== mVal) show = false;
+
+      // Filtravimas pagal oro srautą (intervalai)
+      if(aVal !== "all") {
+        const min = parseInt(box.dataset.airflowMin);
+        const max = parseInt(box.dataset.airflowMax);
+        if(aVal === "0-200" && max > 200) show = false;
+        if(aVal === "200-400" && (min > 400 || max < 200)) show = false;
+        if(aVal === "400+" && max < 400) show = false;
+      }
+
+      // Filtravimas pagal efektyvumą
+      if(eVal !== "all" && box.dataset.efficiency !== eVal) show = false;
+
+      box.style.display = show ? "block" : "none";
+    });
+  }
+
+  manufacturerSelect.addEventListener("change", filterBoxes);
+  airflowSelect.addEventListener("change", filterBoxes);
+  efficiencySelect.addEventListener("change", filterBoxes);
 </script>
 
 </body>
