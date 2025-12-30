@@ -2,24 +2,27 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Kontaktai – Oro Inžinerija</title>
-  <meta name="description" content="Susisiekite su „Oro Inžinerija“ dėl vėdinimo ir rekuperacijos sprendimų visoje Lietuvoje.">
+  <title>Oro Inžinerija – Kontaktai</title>
+  <meta name="description" content="Susisiekite su „Oro Inžinerija“ dėl vėdinimo ir rekuperacijos paslaugų visoje Lietuvoje.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-box">
       <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
+
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -31,50 +34,81 @@
   </div>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
     <h1>Susisiekite su mumis</h1>
-    <p>Greitai atsakome į visus klausimus dėl vėdinimo ir rekuperacijos sistemų.</p>
+    <p>Turite klausimų ar norite užsisakyti vėdinimo sistemą? Parašykite arba paskambinkite.</p>
+    <div class="hero-buttons">
+      <a href="tel:+37060000000" class="btn-primary">📞 Skambinti</a>
+      <a href="#contact-form" class="btn-outline">💬 Parašyti žinutę</a>
+    </div>
   </div>
 </section>
 
-<section class="content-section">
+<!-- ================= KONTAKTINĖ INFORMACIJA ================= -->
+<section class="contact-info">
   <div class="container">
-    <div class="content-intro">
-      <h2>Kontaktinė informacija</h2>
-      <p>Pasirinkite jums patogiausią būdą susisiekti su mumis.</p>
+    <div class="section-intro">
+      <h2>Mūsų kontaktai</h2>
+      <p>Galite susisiekti su mumis šiais būdais:</p>
     </div>
-
-    <div class="content-grid">
-      <div class="content-box">
-        <h3>Telefono numeris</h3>
-        <p>📞 +370 665 65321</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <h3>Telefonas</h3>
+        <p><a href="tel:+37060000000">+370 600 00000</a></p>
       </div>
-      <div class="content-box">
+      <div class="info-item">
         <h3>El. paštas</h3>
-        <p>✉️ info@oro-inzinerija.lt</p>
+        <p><a href="mailto:info@oro-inzinerija.lt">info@oro-inzinerija.lt</a></p>
       </div>
-      <div class="content-box">
-        <h3>Mus rasite</h3>
-        <p>🏢 Kaunas, Lietuva</p>
-
-    <div class="content-intro" style="margin-top:50px;">
-      <h2>Parašykite mums</h2>
+      <div class="info-item">
+        <h3>Adresas</h3>
+        <p>Vilnius, Lietuva</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Jūsų vardas" required>
-      <input type="email" name="email" placeholder="El. paštas" required>
-      <textarea name="message" placeholder="Jūsų žinutė" required></textarea>
-      <button type="submit">Siųsti</button>
+<!-- ================= KONTAKTINĖ FORMA ================= -->
+<section class="contact-form-section">
+  <div class="container">
+    <div class="section-intro">
+      <h2>Parašykite mums</h2>
+      <p>Užpildykite formą ir mes su jumis susisieksime per 24 valandas.</p>
+    </div>
+    <form id="contact-form" action="#" method="post" class="contact-form">
+      <div class="form-group">
+        <label for="name">Vardas</label>
+        <input type="text" id="name" name="name" placeholder="Jūsų vardas" required>
+      </div>
+      <div class="form-group">
+        <label for="email">El. paštas</label>
+        <input type="email" id="email" name="email" placeholder="Jūsų el. paštas" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Žinutė</label>
+        <textarea id="message" name="message" placeholder="Jūsų žinutė" rows="5" required></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Siųsti žinutę</button>
+      </div>
     </form>
   </div>
 </section>
 
+<!-- ================= MOBILE STICKY CTA ================= -->
+<div class="mobile-cta">
+  <a href="tel:+37066565321">📞 Skambinti</a>
+  <a href="#zydrunas.rekuperacija@gmail.com">💬 Parašyti žinutę</a>
+</div>
+
+<!-- ================= FOOTER ================= -->
 <footer>
   © 2025 Oro Inžinerija
 </footer>
 
+<!-- ================= JS BURGER ================= -->
 <script>
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
