@@ -2,30 +2,27 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Rekuperacija Kaune | Oro Inžinerija</title>
-  <meta name="description" content="Rekuperacijos sistemų projektavimas ir montavimas Kaune. Profesionalūs sprendimai namams ir verslui.">
+  <title>Oro Inžinerija – Rekuperacija Kaune</title>
+  <meta name="description" content="Rekuperacijos ir vėdinimo sprendimai Kaune – projektavimas, montavimas, priežiūra.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
-
-    <!-- LOGO -->
     <div class="logo-box">
       <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
-    <!-- BURGER (MOBILE) -->
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- NAV -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -34,43 +31,79 @@
       <a href="apie.html">Apie mus</a>
       <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
-
   </div>
 </header>
 
-<section class="container">
-  <h1>Rekuperacija Kaune</h1>
-
-  <p>
-    Teikiame profesionalias rekuperacijos paslaugas Kaune ir Kauno rajone.
-    Projektuojame, montuojame ir prižiūrime vėdinimo sistemas individualiems namams,
-    butams bei komercinėms patalpoms.
-  </p>
-
-  <h2>Kodėl verta rinktis mus Kaune?</h2>
-  <ul>
-    <li>✔ Patirtis su naujos statybos namais</li>
-    <li>✔ Darbai atliekami laiku</li>
-    <li>✔ Naudojame patikimą įrangą</li>
-    <li>✔ Pilnas aptarnavimas nuo A iki Z</li>
-  </ul>
-
-  <a href="kontaktai.html" class="btn-primary">Gauti pasiūlymą Kaune</a>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Rekuperacija Kaune</h1>
+    <p>Projektavimas • Montavimas • Priežiūra</p>
+    <div class="hero-buttons">
+      <a href="kontaktai.html" class="btn-primary">Gauti pasiūlymą</a>
+    </div>
+  </div>
 </section>
 
-<footer>© 2025 Oro Inžinerija</footer>
+<!-- ================= PASLAUGOS ================= -->
+<section class="services">
+  <div class="container">
+    <div class="section-intro">
+      <h2>Kauno rekuperacijos sprendimai</h2>
+      <p>Profesionalūs sprendimai vėdinimui ir rekuperacijai Kaune.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-item">
+        <img src="img/icons/montavimas.svg" alt="Montavimas" class="service-icon">
+        <h3>Rekuperatoriaus montavimas</h3>
+        <p>Greitas ir profesionalus montavimas su garantija.</p>
+      </div>
+      <div class="service-item">
+        <img src="img/icons/iranga.svg" alt="Įranga" class="service-icon">
+        <h3>Įrangos pardavimas</h3>
+        <p>Tik patikimos įrangos tiekimas ir konsultacijos.</p>
+      </div>
+      <div class="service-item">
+        <img src="img/icons/prieziura.svg" alt="Priežiūra" class="service-icon">
+        <h3>Priežiūra ir aptarnavimas</h3>
+        <p>Reguliari techninė priežiūra ir sistemų kontrolė.</p>
+      </div>
+    </div>
+    <div class="services-cta">
+      <a href="kontaktai.html" class="btn-primary">Užsisakyti paslaugą Kaune</a>
+    </div>
+  </div>
+</section>
 
+<!-- ================= TRUST ================= -->
+<section class="trust">
+  <div class="container">
+    <h2>Kodėl verta rinktis „Oro Inžineriją“?</h2>
+    <div class="trust-grid">
+      <div class="trust-item"><h3>Patirtis</h3><p>Daugiau nei 5 metų patirtis vėdinimo ir rekuperacijos srityje.</p></div>
+      <div class="trust-item"><h3>Kokybė</h3><p>Dirbame tik su patikima įranga ir laikomės gamintojų reikalavimų.</p></div>
+      <div class="trust-item"><h3>Garantija</h3><p>Suteikiame garantiją darbams ir sumontuotai sistemai.</p></div>
+      <div class="trust-item"><h3>Visa Lietuva</h3><p>Dirbame visoje Lietuvoje – atvykstame ten, kur reikia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  © 2025 Oro Inžinerija
+</footer>
+
+<!-- ================= JS BURGER ================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
-
   if (burger && menu) {
-    burger.addEventListener("click", function () {
+    burger.addEventListener("click", () => {
       menu.classList.toggle("active");
+      burger.classList.toggle("open");
     });
   }
-});
 </script>
+
 </body>
 </html>
