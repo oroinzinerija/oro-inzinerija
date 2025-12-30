@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Rekuperatoriai ir vėdinimo įranga | Oro Inžinerija</title>
-  <meta name="description" content="Platus rekuperatorių pasirinkimas su kainomis ir efektyvumu – nuo Zehnder iki DucoBox, Brink, Itho ir kt. Patikimi sprendimai namams ir verslui.">
+  <meta name="description" content="Platus rekuperatorių pasirinkimas su kainomis, efektyvumu ir našumu. Zehnder, Brink, DucoBox, Itho ir kt.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,16 +11,13 @@
 
 <header class="site-header">
   <div class="container header-flex">
-    <!-- LOGO -->
     <div class="logo-box">
       <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
-    <!-- BURGER (MOBILE) -->
     <div class="burger" id="burger">
       <span></span><span></span><span></span>
     </div>
-    <!-- NAV -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -36,118 +33,110 @@
   <div class="container">
     <div class="content-intro">
       <h1>Rekuperatoriai ir vėdinimo įranga</h1>
-      <p>Siūlome platų rekuperatorių asortimentą su **kainomis, našumo ir efektyvumo duomenimis**, kad galėtumėte lengvai palyginti ir pasirinkti optimalią sistemą savo namams ar verslui.</p>
+      <p>Siūlome platų rekuperatorių asortimentą su kainomis, našumo ir efektyvumo duomenimis. Galite palyginti modelius ir pasirinkti optimalų sprendimą savo namams ar verslui.</p>
     </div>
-    <!-- ================= FILTERS ================= -->
-<div class="filters" style="margin-bottom:30px;">
-  <h3>Filtruoti įrangą:</h3>
-  <div class="filter-group">
-    <label>Kaina:</label>
-    <select id="filter-price">
-      <option value="all">Visos</option>
-      <option value="0-500">Iki 500 €</option>
-      <option value="500-1500">500–1500 €</option>
-      <option value="1500-3000">1500–3000 €</option>
-    </select>
-  </div>
-  <div class="filter-group">
-    <label>Oro srautas:</label>
-    <select id="filter-airflow">
-      <option value="all">Visi</option>
-      <option value="0-200">Iki 200 m³/h</option>
-      <option value="200-400">200–400 m³/h</option>
-      <option value="400-1000">Virš 400 m³/h</option>
-    </select>
-  </div>
-  <div class="filter-group">
-    <label>Energijos klasė:</label>
-    <select id="filter-energy">
-      <option value="all">Visos</option>
-      <option value="A">A</option>
-      <option value="A+">A+</option>
-      <option value="A++">A++</option>
-    </select>
-  </div>
-</div>
 
+    <!-- ================= FILTRAI ================= -->
+    <div class="filters">
+      <div class="filter-group">
+        <label for="manufacturer">Gamintojas</label>
+        <select id="manufacturer">
+          <option value="all">Visi</option>
+          <option value="zehnder">Zehnder</option>
+          <option value="brink">Brink</option>
+          <option value="ducobox">DucoBox</option>
+          <option value="itho">Itho</option>
+          <option value="mini">Mini rekuperatoriai</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="airflow">Oro srautas</label>
+        <select id="airflow">
+          <option value="all">Visi</option>
+          <option value="0-200">Iki 200 m³/h</option>
+          <option value="200-400">200–400 m³/h</option>
+          <option value="400+">400+ m³/h</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="efficiency">Efektyvumas</label>
+        <select id="efficiency">
+          <option value="all">Visi</option>
+          <option value="high">A klasė ir daugiau</option>
+          <option value="medium">Vidutinis–geras</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ================= REKUPERATORIAI ================= -->
     <div class="content-grid">
 
       <!-- Zehnder ComfoAir Flex 350 HRV -->
-      <div class="content-box">
+      <div class="content-box" data-manufacturer="zehnder" data-airflow="0-400" data-efficiency="high">
         <img src="img/zehnder-comfoair-flex350.jpg" alt="Zehnder ComfoAir Flex 350 HRV">
         <h3>Zehnder ComfoAir Flex 350 HRV</h3>
-        <p>Premium klasės vokiškas rekuperatorius su entalpiniu šilumokaičiu — drėgmės ir šilumos grąžinimas. A+ klasės efektyvumas, idealus iki ~200 m².</p>
-        <p><strong>Kaina:</strong> ~2 799 € (VAT incl.)</p>
-        <p><em>Oro srautas:</em> iki 350 m³/h | <em>Efektyvumas:</em> iki ~85 % | <em>Energijos klasė:</em> A+ :contentReference[oaicite:0]{index=0}</p>
+        <p>Premium klasės vokiškas rekuperatorius su entalpiniu šilumokaičiu. Idealus iki ~200 m².</p>
+        <p><strong>Kaina:</strong> ~2 799 €</p>
+        <p><em>Oro srautas:</em> iki 350 m³/h | <em>Efektyvumas:</em> ~85 %</p>
       </div>
 
       <!-- Zehnder ComfoAir Q450 -->
-      <div class="content-box">
+      <div class="content-box" data-manufacturer="zehnder" data-airflow="400+" data-efficiency="high">
         <img src="img/zehnder-comfoair-q450.jpg" alt="Zehnder ComfoAir Q450">
         <h3>Zehnder ComfoAir Q450</h3>
-        <p>Galingesnis Zehnder modelis su aukštos klasės ventiliacija ir energijos atgavimu — puikus didesniems objektams.</p>
-        <p><strong>Kaina:</strong> ~2 371 €–3 018 €</p>
-        <p><em>Oro srautas:</em> ~450 m³/h | <em>Efektyvumas:</em> aukštas (A+ ir daugiau) :contentReference[oaicite:1]{index=1}</p>
+        <p>Galingesnis Zehnder modelis su energijos atgavimu — puikus didesniems objektams.</p>
+        <p><strong>Kaina:</strong> ~2 371–3 018 €</p>
+        <p><em>Oro srautas:</em> ~450 m³/h | <em>Efektyvumas:</em> aukštas (A+)</p>
       </div>
 
       <!-- Brink Flair 400 -->
-      <div class="content-box">
+      <div class="content-box" data-manufacturer="brink" data-airflow="200-400" data-efficiency="high">
         <img src="img/brink-flair-400.jpg" alt="Brink Flair 400">
         <h3>Brink Flair 400</h3>
-        <p>Olandiškas rekuperatorius su geru šilumos grąžinimu ir energijos efektyvumu. Tinka didesniems namams ir verslo patalpoms.</p>
-        <p><strong>Kaina:</strong> ~1 780 €–2 615 €</p>
-        <p><em>Oro srautas:</em> ~400 m³/h | <em>Efektyvumas:</em> aukštas (A klasė) :contentReference[oaicite:2]{index=2}</p>
+        <p>Olandiškas rekuperatorius su geru šilumos grąžinimu ir energijos efektyvumu.</p>
+        <p><strong>Kaina:</strong> ~1 780–2 615 €</p>
+        <p><em>Oro srautas:</em> ~400 m³/h | <em>Efektyvumas:</em> A klasė</p>
       </div>
 
       <!-- DucoBox Energy Comfort Plus -->
-      <div class="content-box">
+      <div class="content-box" data-manufacturer="ducobox" data-airflow="200-400" data-efficiency="high">
         <img src="img/ducobox-energy-comfort-plus.jpg" alt="DucoBox Energy Comfort Plus">
         <h3>DucoBox Energy Comfort Plus</h3>
-        <p>Belgijos gamintojo rekuperatorius su plačiu diapazonu variantų, tylus veikimas ir didelis efektyvumas. Puikus namams ir biurams.</p>
-        <p><strong>Kaina:</strong> ~1 792 €–2 360 €</p>
-        <p><em>Oro srautas:</em> 300–450 m³/h | <em>Efektyvumas:</em> geras › aukštas :contentReference[oaicite:3]{index=3}</p>
+        <p>Belgijos gamintojo rekuperatorius su plačiu diapazonu variantų, tylus veikimas.</p>
+        <p><strong>Kaina:</strong> ~1 792–2 360 €</p>
+        <p><em>Oro srautas:</em> 300–450 m³/h | <em>Efektyvumas:</em> geras–aukštas</p>
       </div>
 
       <!-- Itho Daalderop HRU ECO 350 HP -->
-      <div class="content-box">
+      <div class="content-box" data-manufacturer="itho" data-airflow="0-400" data-efficiency="medium">
         <img src="img/itho-daalderop-hru-eco350hp.jpg" alt="Itho Daalderop HRU ECO 350 HP">
         <h3>Itho Daalderop HRU ECO 350 HP</h3>
-        <p>Ekonomiškas rekuperatorius su geru našumu ir energijos atgavimu, tinkamas gyvenamiesiems namams ar butams.</p>
-        <p><strong>Kaina:</strong> ~903 € (excl. VAT)</p>
-        <p><em>Oro srautas:</em> ~350 m³/h | <em>Efektyvumas:</em> vidutinis–geras :contentReference[oaicite:4]{index=4}</p>
+        <p>Ekonomiškas rekuperatorius su geru našumu ir energijos atgavimu.</p>
+        <p><strong>Kaina:</strong> ~903 €</p>
+        <p><em>Oro srautas:</em> ~350 m³/h | <em>Efektyvumas:</em> vidutinis–geras</p>
       </div>
 
-      <!-- Itho Daalderop HRU 400 -->
-      <div class="content-box">
-        <img src="img/itho-daalderop-hru400.jpg" alt="Itho Daalderop HRU 400">
-        <h3>Itho Daalderop HRU 400</h3>
-        <p>Universalesnis Itho modelis su šilumos atgavimo sistema ir solidžiu našumu už prieinamą kainą.</p>
-        <p><strong>Kaina:</strong> ~1 372 € (excl. VAT)</p>
-        <p><em>Oro srautas:</em> ~400 m³/h | <em>Efektyvumas:</em> vidutinis–geras :contentReference[oaicite:5]{index=5}</p>
-      </div>
-
-      <!-- Mini rekuperatoriai – pavyzdys iš katalogo -->
-      <div class="content-box">
+      <!-- Mini rekuperatoriai -->
+      <div class="content-box" data-manufacturer="mini" data-airflow="0-200" data-efficiency="high">
         <img src="img/blauberg-solo-a35.jpg" alt="Blauberg Solo A35">
-        <h3>Blauberg Solo A35 S4 PRO R V.2</h3>
-        <p>Mini rekuperatorius, tinkamas tiek butams, tiek mažesnėms patalpoms su A klasės efektyvumu ir tylia veikla. :contentReference[oaicite:6]{index=6}</p>
-        <p><strong>Apytikslė kaina:</strong> nuo ~300–500 €</p>
-        <p><em>Oro srautas:</em> ~40 m³/h | <em>Efektyvumas:</em> ~80–85 % :contentReference[oaicite:7]{index=7}</p>
+        <h3>Blauberg Solo A35</h3>
+        <p>Mini rekuperatorius mažoms patalpoms su tylia veikla.</p>
+        <p><strong>Kaina:</strong> ~300–500 €</p>
+        <p><em>Oro srautas:</em> ~40 m³/h | <em>Efektyvumas:</em> ~80–85 %</p>
       </div>
 
-      <!-- Mitsubishi Electric mini modelis -->
-      <div class="content-box">
+      <div class="content-box" data-manufacturer="mini" data-airflow="0-200" data-efficiency="high">
         <img src="img/mitsubishi-vl50sr2-e.jpg" alt="Mitsubishi VL-50SR2-E">
         <h3>Mitsubishi Electric VL-50SR2-E</h3>
-        <p>Mitsubishi mini rekuperatorius su A klasės efektyvumu – puikus sprendimas mažų erdvių vėdinimui. :contentReference[oaicite:8]{index=8}</p>
-        <p><strong>Apytikslė kaina:</strong> nuo ~400–600 €</p>
-        <p><em>Oro srautas:</em> ~50 m³/h | <em>Efektyvumas:</em> ~80–85 % :contentReference[oaicite:9]{index=9}</p>
+        <p>Mini rekuperatorius su A klasės efektyvumu – idealus mažoms erdvėms.</p>
+        <p><strong>Kaina:</strong> ~400–600 €</p>
+        <p><em>Oro srautas:</em> ~50 m³/h | <em>Efektyvumas:</em> ~80–85 %</p>
       </div>
 
     </div>
 
-    <!-- CTA pabaigoje -->
-    <div class="services-cta" style="text-align:center; margin-top:40px;">
+    <!-- CTA -->
+    <div class="services-cta">
       <a href="kontaktai.html" class="btn-primary">Sužinoti daugiau / Užsisakyti</a>
     </div>
 
@@ -159,6 +148,7 @@
 </footer>
 
 <script>
+  // Burger menu
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
   if (burger && menu) {
@@ -167,6 +157,30 @@
       burger.classList.toggle("open");
     });
   }
+
+  // ================== FILTRAI ==================
+  const manufacturerSelect = document.getElementById("manufacturer");
+  const airflowSelect = document.getElementById("airflow");
+  const efficiencySelect = document.getElementById("efficiency");
+  const boxes = document.querySelectorAll(".content-box");
+
+  function filterBoxes() {
+    const mVal = manufacturerSelect.value;
+    const aVal = airflowSelect.value;
+    const eVal = efficiencySelect.value;
+
+    boxes.forEach(box => {
+      let show = true;
+      if(mVal !== "all" && box.dataset.manufacturer !== mVal) show = false;
+      if(aVal !== "all" && box.dataset.airflow !== aVal) show = false;
+      if(eVal !== "all" && box.dataset.efficiency !== eVal) show = false;
+      box.style.display = show ? "block" : "none";
+    });
+  }
+
+  manufacturerSelect.addEventListener("change", filterBoxes);
+  airflowSelect.addEventListener("change", filterBoxes);
+  efficiencySelect.addEventListener("change", filterBoxes);
 </script>
 
 </body>
