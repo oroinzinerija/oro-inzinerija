@@ -2,27 +2,25 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Apie mus | Oro Inžinerija</title>
-  <meta name="description" content="Profesionali vėdinimo ir rekuperacijos komanda visoje Lietuvoje.">
+  <title>Apie mus – Oro Inžinerija</title>
+  <meta name="description" content="Sužinokite daugiau apie Oro Inžineriją – profesionalūs rekuperacijos ir vėdinimo sprendimai visoje Lietuvoje.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
-
     <div class="logo-box">
       <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
-
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
-
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -31,66 +29,67 @@
       <a href="apie.html">Apie mus</a>
       <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
-
   </div>
 </header>
 
-<section class="content-section">
-  <div class="content-intro">
-    <h1>Apie mus</h1>
-    <p>
-      „Oro Inžinerija“ – tai patikima vėdinimo ir rekuperacijos sprendimų
-      įmonė, dirbanti visoje Lietuvoje. Mūsų tikslas – ne tik sumontuoti
-      sistemą, bet sukurti ilgalaikį komfortą ir sveiką vidaus klimatą.
-    </p>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Apie „Oro Inžineriją“</h1>
+    <p>Profesionalūs vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje</p>
   </div>
+</section>
 
-  <div class="content-grid">
-    <div class="content-box">
-      <h2>Patirtis ir kompetencija</h2>
-      <p>
-        Turime sukauptą patirtį projektuojant ir montuojant
-        vėdinimo bei rekuperacijos sistemas individualiuose namuose,
-        butuose ir komercinėse patalpose. Sprendimus parenkame
-        atsakingai, remdamiesi techniniais skaičiavimais ir praktika.
-      </p>
+<!-- ================= ABOUT / APRAŠYMAS ================= -->
+<section class="content-section">
+  <div class="container">
+    <div class="content-intro">
+      <h2>Kas mes esame?</h2>
+      <p>„Oro Inžinerija“ – tai profesionali komanda, teikianti vėdinimo ir rekuperacijos sprendimus visoje Lietuvoje. Dirbame su patikima įranga, garantuojame kokybę ir rūpinamės kiekvienu projektu nuo konsultacijos iki įrangos paleidimo.</p>
     </div>
 
-    <div class="content-box">
-      <h2>Atsakingas požiūris</h2>
-      <p>
-        Kiekvienas projektas mums yra individualus.
-        Vertiname aiškią komunikaciją, terminų laikymąsi
-        ir tvarkingą darbą objekte. Siekiame, kad klientas
-        jaustųsi užtikrintas kiekviename etape.
-      </p>
-    </div>
-
-    <div class="content-box">
-      <h2>Ilgalaikė vertė</h2>
-      <p>
-        Orientuojamės į sprendimus, kurie veikia patikimai
-        daugelį metų. Todėl siūlome ne tik montavimą,
-        bet ir techninę priežiūrą, konsultacijas bei
-        pagalbą eksploatacijos metu.
-      </p>
+    <div class="content-grid">
+      <div class="content-box">
+        <h3>Patirtis</h3>
+        <p>Daugiau nei 5 metų patirtis vėdinimo ir rekuperacijos srityje užtikrina sklandų darbų atlikimą.</p>
+      </div>
+      <div class="content-box">
+        <h3>Kokybė</h3>
+        <p>Dirbame tik su patikima įranga ir laikomės gamintojų reikalavimų.</p>
+      </div>
+      <div class="content-box">
+        <h3>Garantija</h3>
+        <p>Suteikiame garantiją darbams ir sumontuotai sistemai.</p>
+      </div>
+      <div class="content-box">
+        <h3>Visa Lietuva</h3>
+        <p>Teikiame paslaugas visoje Lietuvoje – atvykstame ten, kur reikia.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>© 2025 Oro Inžinerija</footer>
+<!-- ================= MOBILE STICKY CTA ================= -->
+<div class="mobile-cta">
+  <a href="tel:+370 665 65321">📞 Skambinti</a>
+  <a href="zydrunas.rekuperacija@gmail.com">💬 Gauti pasiūlymą</a>
+</div>
 
+<!-- ================= FOOTER ================= -->
+<footer>
+  © 2025 Oro Inžinerija
+</footer>
+
+<!-- ================= JS BURGER ================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
-
   if (burger && menu) {
-    burger.addEventListener("click", function () {
+    burger.addEventListener("click", () => {
       menu.classList.toggle("active");
+      burger.classList.toggle("open");
     });
   }
-});
 </script>
 
 </body>
