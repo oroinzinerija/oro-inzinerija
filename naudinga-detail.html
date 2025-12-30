@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>Naudingos informacijos straipsnis – Oro Inžinerija</title>
+  <meta name="description" content="Pilnas straipsnis apie vėdinimą ir rekuperaciją.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-box">
+      <img src="img/logo.jpg" alt="Oro Inžinerija" class="logo">
+      <span class="site-name">Oro Inžinerija</span>
+    </div>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="header-nav" id="main-menu">
+      <a href="index.html">Pagrindinis</a>
+      <a href="paslaugos.html">Paslaugos</a>
+      <a href="iranga.html">Įranga</a>
+      <a href="naudinga.html">Naudinga</a>
+      <a href="apie.html">Apie mus</a>
+      <a href="kontaktai.html" class="btn">Kontaktai</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Kaip pasirinkti tinkamą rekuperatorių?</h1> <!-- čia keisis pagal straipsnį -->
+    <p>Patogūs patarimai ir gairės, kad jūsų vėdinimo sistema veiktų efektyviai.</p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="content-section">
+  <div class="container">
+    <div class="content-intro">
+      <h2>Detalus straipsnis</h2>
+      <p>Šiame straipsnyje rasite visą reikalingą informaciją, kad galėtumėte priimti tinkamus sprendimus savo namų vėdinimo sistemoje.</p>
+    </div>
+
+    <div class="content-grid">
+      <div class="content-box">
+        <h3>1. Kodėl svarbu pasirinkti tinkamą įrangą?</h3>
+        <p>Rekuperatorius turi atitikti jūsų namų plotą, energijos poreikius ir garso komfortą. Teisingas pasirinkimas užtikrina efektyvų vėdinimą ir energijos taupymą.</p>
+      </div>
+      <div class="content-box">
+        <h3>2. Montavimo patarimai</h3>
+        <p>Įranga turi būti sumontuota profesionaliai, laikantis gamintojo rekomendacijų. Netinkamas montavimas gali sumažinti sistemos efektyvumą ir sutrumpinti tarnavimo laiką.</p>
+      </div>
+      <div class="content-box">
+        <h3>3. Reguliari priežiūra</h3>
+        <p>Filtrų keitimas, patikrinimas ir techninė priežiūra užtikrina, kad jūsų sistema veiktų ilgai ir efektyviai.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="services-cta" style="margin-top:40px; text-align:center;">
+      <a href="kontaktai.html" class="btn-primary">Gauti konsultaciją</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  © 2025 Oro Inžinerija
+</footer>
+
+<!-- ================= JS BURGER ================= -->
+<script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("main-menu");
+  if (burger && menu) {
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      burger.classList.toggle("open");
+    });
+  }
+</script>
+
+</body>
+</html>
