@@ -356,3 +356,26 @@ form button:hover {
     padding: 30px 25px;
   }
 }
+
+.btn-primary {
+  background-color: #1e7f43;
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #166535;
+}
+
+.btn-outline {
+  border: 2px solid #1e7f43;
+  color: #1e7f43;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
