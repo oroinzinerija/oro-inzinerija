@@ -43,23 +43,30 @@ a {
 .logo-box {
   display: flex;
   align-items: center;
+  gap: 20px; /* tarpas tarp logotipo ir kontaktų */
 }
 
 .logo-box img {
   height: 180px; /* Desktop logotipas */
   max-width: 100%;
+  flex-shrink: 0; /* neleisti mažėti */
 }
 
 .header-contact {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  text-align: right;
+  text-align: left; /* perkeltas prie logotipo */
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .header-contact p {
-  margin-bottom: 5px;
+  margin: 0;
 }
 
+/* ================= NAVIGATION ================= */
 .header-nav {
   display: flex;
   align-items: center;
@@ -98,9 +105,11 @@ a {
 .burger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .burger.open span:nth-child(2) {
   opacity: 0;
 }
+
 .burger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
@@ -266,67 +275,66 @@ a {
   margin: 50px 0;
 }
 
-/* ================= MOBILE STICKY CTA ================= */
-.mobile-cta {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #007BFF;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-.mobile-cta a {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.mobile-cta a:hover {
-  opacity: 0.9;
-}
-
 /* ================= FOOTER ================= */
 footer {
   background: #222;
   color: #fff;
-  padding: 25px 0;
+  padding: 80px 0 25px; /* pakelta vietos sticky bar */
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 footer a {
   color: #fff;
 }
 
-/* ================= HEADER CONTACT ================= */
-.header-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.header-contact p {
-  font-size: 1.3rem;
+footer p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
   font-weight: bold;
-  line-height: 1.4;
-  margin: 0;
 }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width: 768px){
+/* ================= STICKY CONTACT BAR ================= */
+.sticky-contact {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background: #007BFF;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 12px 0;
+  z-index: 1000;
+  bottom: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.sticky-contact a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.sticky-contact a:hover {
+  opacity: 0.9;
+}
+
+/* ================= MOBILE STICKY / RESPONSIVE ================= */
+@media(max-width: 768px) {
   .burger {
     display: flex;
   }
+
   .header-nav {
     display: none;
     flex-direction: column;
     width: 100%;
     text-align: left;
   }
+
   .header-nav.active {
     display: flex;
     position: absolute;
@@ -339,22 +347,71 @@ footer a {
     border-top: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
+
   .header-flex {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
+
   .header-contact {
     align-items: flex-start;
     margin-top: 10px;
+    font-size: 1.1rem;
   }
+
   .hero {
     padding: 60px 15px;
   }
+
   .hero h1 {
     font-size: 1.8rem;
   }
+
   .hero p {
     font-size: 1rem;
   }
+
+  /* MOBILE STICKY BAR - pakelti, kad neuzdengtų footer */
+  .sticky-contact {
+    bottom: 60px;
+    font-size: 1rem;
+    gap: 25px;
+  }
+
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    background: #007BFF;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .mobile-cta a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+/* ================= ADDITIONAL IMPROVEMENTS ================= */
+/* Logotipo ir kontaktų aligmentas viename lygyje */
+.header-flex .logo-box,
+.header-flex .header-contact {
+  display: flex;
+  align-items: center;
+}
+
+/* Spacing tarp logotipo ir kontaktų */
+.header-flex {
+  justify-content: space-between;
+}
+
+/* Sticky juosta netrukdo footer tekstui */
+footer {
+  padding-bottom: 100px; /* vietos sticky juostai mobiliems */
 }
