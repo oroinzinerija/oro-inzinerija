@@ -9,11 +9,10 @@
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-box">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo">
+      <img src="img/logo.png" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
     <div class="burger" id="burger">
@@ -27,12 +26,11 @@
       <a href="iranga.html">Įranga</a>
       <a href="naudinga.html">Naudinga</a>
       <a href="apie.html">Apie mus</a>
-      <a href="kontaktai.html" class="btn">Kontaktai</a>
+      <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
     </nav>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
     <h1>Mūsų atlikti darbai</h1>
@@ -40,62 +38,58 @@
   </div>
 </section>
 
-<!-- ================= GALLERY / DARBAI ================= -->
-<section class="content-section gallery">
-  <div class="container">
-    <div class="content-intro">
-      <h2>Darbų galerija</h2>
-      <p>Čia galite pamatyti mūsų atliktus vėdinimo ir rekuperacijos projektus su garantija.</p>
+<section class="content-section gallery container">
+  <div class="content-intro">
+    <h2>Darbų galerija</h2>
+    <p>Čia galite pamatyti mūsų atliktus vėdinimo ir rekuperacijos projektus.</p>
+  </div>
+  <div class="content-grid">
+    <div class="content-box">
+      <img src="img/darbas1.jpg" alt="Darbų pavyzdys 1">
+      <h3>Rekuperatoriaus montavimas – Vilnius</h3>
+      <p>Modernus sprendimas su garantija.</p>
     </div>
-    <div class="content-grid">
-      <div class="content-box">
-        <img src="img/darbas1.jpg" alt="Darbų pavyzdys 1">
-        <h3>Rekuperatoriaus montavimas – Vilnius</h3>
-        <p>Modernus sprendimas su garantija.</p>
-      </div>
-      <div class="content-box">
-        <img src="img/darbas2.jpg" alt="Darbų pavyzdys 2">
-        <h3>Rekuperatoriaus montavimas – Kaunas</h3>
-        <p>Profesionalus montavimas ir įrangos paleidimas.</p>
-      </div>
-      <div class="content-box">
-        <img src="img/darbas3.jpg" alt="Darbų pavyzdys 3">
-        <h3>Įrangos pardavimas – Klaipėda</h3>
-        <p>Patikimos įrangos tiekimas ir konsultacijos.</p>
-      </div>
-      <!-- Galima pridėti daugiau darbų -->
+    <div class="content-box">
+      <img src="img/darbas2.jpg" alt="Darbų pavyzdys 2">
+      <h3>Rekuperatoriaus montavimas – Kaunas</h3>
+      <p>Profesionalus montavimas ir įrangos paleidimas.</p>
+    </div>
+    <div class="content-box">
+      <img src="img/darbas3.jpg" alt="Darbų pavyzdys 3">
+      <h3>Įrangos pardavimas – Klaipėda</h3>
+      <p>Patikimos įrangos tiekimas ir konsultacijos.</p>
     </div>
   </div>
-</section>
-
-<!-- ================= CTA / KONTAKTAI ================= -->
-<section class="services-cta">
-  <div class="container" style="text-align:center; margin-top:40px;">
+  <div class="services-cta" style="text-align:center; margin-top:40px;">
     <a href="kontaktai.html" class="btn-primary">Kreiptis dėl konsultacijos</a>
   </div>
 </section>
 
-<!-- ================= MOBILE STICKY CTA ================= -->
 <div class="mobile-cta">
-  <a href="tel:+37060000000">📞 Skambinti</a>
+  <a href="tel:+37066565321">📞 Skambinti</a>
   <a href="kontaktai.html">💬 Gauti pasiūlymą</a>
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  © 2025 Oro Inžinerija
+<footer class="container" style="text-align:center; padding:30px 0; color:#334155;">
+  <p>© 2026 Oro Inžinerija</p>
+  <p>Tel: <a href="tel:+37066565321">+370 665 65321</a> | Email: <a href="mailto:zydrunas.rekuperacija@gmail.com">zydrunas.rekuperacija@gmail.com</a></p>
 </footer>
 
-<!-- ================= JS BURGER ================= -->
 <script>
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
-  if (burger && menu) {
-    burger.addEventListener("click", () => {
-      menu.classList.toggle("active");
-      burger.classList.toggle("open");
-    });
-  }
+const burger = document.getElementById("burger");
+const menu = document.getElementById("main-menu");
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  burger.classList.toggle("open");
+});
+document.querySelectorAll('.header-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if(menu.classList.contains('active')){
+      menu.classList.remove('active');
+      burger.classList.remove('open');
+    }
+  });
+});
 </script>
 <script src="js/main.js"></script>
 </body>
