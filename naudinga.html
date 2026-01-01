@@ -2,8 +2,8 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Oro Inžinerija – Naudinga informacija</title>
-  <meta name="description" content="Naudinga informacija apie vėdinimo, rekuperacijos sistemas ir jų priežiūrą.">
+  <title>Oro Inžinerija – Naudinga</title>
+  <meta name="description" content="Naudingos žinios apie rekuperaciją, vėdinimą ir sistemų priežiūrą. Patarimai, gidai ir informacija Jūsų namams ir verslui.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-box">
-      <img src="img/logo.png" alt="Oro Inžinerija" class="logo" style="min-height:130px;">
+      <img src="img/logo.png" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
@@ -29,7 +29,7 @@
       <a href="iranga.html">Įranga</a>
       <a href="naudinga.html" class="active">Naudinga</a>
       <a href="apie.html">Apie mus</a>
-      <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
+      <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
   </div>
 </header>
@@ -37,40 +37,47 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Naudinga informacija</h1>
-    <p>Patarimai, gidai ir informacija apie vėdinimo ir rekuperacijos sistemas.</p>
+    <h1>Naudingos žinios apie vėdinimą ir rekuperaciją</h1>
+    <p>Suteikiame patarimus ir gidus, kurie padės išsirinkti, prižiūrėti ir naudoti rekuperacijos sistemas efektyviai.</p>
+    <div class="hero-buttons">
+      <a href="kontaktai.html" class="btn-primary">📞 Pasikonsultuoti</a>
+      <a href="iranga.html" class="btn-outline">Peržiūrėti įrangą</a>
+    </div>
   </div>
 </section>
 
-<!-- ================= CONTENT / TIPS ================= -->
+<!-- ================= NAUDINGA TURINYS ================= -->
 <section class="content-section container">
   <div class="section-intro">
-    <h2>Patarimai ir gidai</h2>
-    <p>Čia rasite naudingą informaciją apie jūsų vėdinimo sistemų priežiūrą, efektyvumą ir saugumą.</p>
+    <h2>Naudingos temos</h2>
+    <p>Čia rasite informaciją apie rekuperacijos sistemų tipus, priežiūrą, energijos taupymo patarimus ir dažniausiai užduodamus klausimus.</p>
   </div>
 
   <div class="content-grid">
     <div class="content-box">
-      <img src="img/tip1.jpg" alt="Patarimas 1">
-      <h3>Rekuperatoriaus filtrų priežiūra</h3>
-      <p>Kaip ir kada keisti filtrus, kad sistema veiktų efektyviai.</p>
+      <img src="img/naudinga1.jpg" alt="Rekuperacijos sistemos">
+      <h3>Rekuperacijos sistemos gidai</h3>
+      <p>Sužinokite, kaip veikia rekuperatorius, kokias sistemas pasirinkti namams ar verslui.</p>
+      <a href="naudinga-detail1.html" class="btn-outline">Plačiau</a>
     </div>
     <div class="content-box">
-      <img src="img/tip2.jpg" alt="Patarimas 2">
-      <h3>Vėdinimo sistemos valymas</h3>
-      <p>Patikimi būdai palaikyti oro kokybę namuose ir biure.</p>
+      <img src="img/naudinga2.jpg" alt="Vėdinimo patarimai">
+      <h3>Vėdinimo patarimai</h3>
+      <p>Kaip užtikrinti tinkamą oro cirkuliaciją, sumažinti drėgmę ir pagerinti patalpų mikroklimatą.</p>
+      <a href="naudinga-detail2.html" class="btn-outline">Plačiau</a>
     </div>
     <div class="content-box">
-      <img src="img/tip3.jpg" alt="Patarimas 3">
-      <h3>Efektyvus energijos taupymas</h3>
-      <p>Kaip sumažinti šildymo sąnaudas naudojant rekuperaciją.</p>
+      <img src="img/naudinga3.jpg" alt="Priežiūros patarimai">
+      <h3>Įrangos priežiūra</h3>
+      <p>Kaip reguliariai prižiūrėti rekuperatorių, keisti filtrus ir užtikrinti sistemos ilgaamžiškumą.</p>
+      <a href="naudinga-detail3.html" class="btn-outline">Plačiau</a>
     </div>
   </div>
 </section>
 
 <!-- ================= CTA ================= -->
-<section class="services-cta container" style="text-align:center; margin-top:30px;">
-  <a href="kontaktai.html" class="btn-primary">Gauti profesionalią konsultaciją</a>
+<section class="services-cta container">
+  <a href="kontaktai.html" class="btn-primary">Gauti konsultaciją / pasiūlymą</a>
 </section>
 
 <!-- ================= MOBILE STICKY CTA ================= -->
@@ -89,12 +96,14 @@
 <script>
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
+
   if (burger && menu) {
     burger.addEventListener("click", () => {
       menu.classList.toggle("active");
       burger.classList.toggle("open");
     });
   }
+
   document.querySelectorAll('.header-nav a').forEach(link => {
     link.addEventListener('click', () => {
       if(menu.classList.contains('active')){
@@ -104,6 +113,7 @@
     });
   });
 </script>
+
 <script src="js/main.js"></script>
 </body>
 </html>
