@@ -9,32 +9,28 @@
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-box">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo">
+      <img src="img/logo.png" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
-
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
-
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
       <a href="iranga.html">Įranga</a>
       <a href="naudinga.html">Naudinga</a>
-      <a href="apie.html">Apie mus</a>
-      <a href="kontaktai.html" class="btn">Kontaktai</a>
+      <a href="apie.html" class="active">Apie mus</a>
+      <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
     </nav>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
     <h1>Apie „Oro Inžineriją“</h1>
@@ -46,58 +42,59 @@
   </div>
 </section>
 
-<!-- ================= MŪSŲ KOMANDA ================= -->
-<section class="about-us">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Mūsų istorija</h2>
-      <p>„Oro Inžinerija“ – tai profesionali komanda, teikianti vėdinimo ir rekuperacijos sprendimus daugiau nei 5 metus.</p>
+<section class="about-us container">
+  <div class="section-intro">
+    <h2>Mūsų istorija</h2>
+    <p>„Oro Inžinerija“ – profesionali komanda, teikianti vėdinimo ir rekuperacijos sprendimus daugiau nei 5 metus.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-item">
+      <h3>Patirtis</h3>
+      <p>Įgyvendinome daugybę projektų visoje Lietuvoje.</p>
     </div>
-    <div class="about-grid">
-      <div class="about-item">
-        <h3>Patirtis</h3>
-        <p>Turime ilgametę patirtį ir įgyvendinome daugybę projektų visoje Lietuvoje.</p>
-      </div>
-      <div class="about-item">
-        <h3>Kokybė</h3>
-        <p>Dirbame tik su patikima įranga ir laikomės gamintojų reikalavimų.</p>
-      </div>
-      <div class="about-item">
-        <h3>Komanda</h3>
-        <p>Mūsų specialistai pasiruošę suteikti profesionalią konsultaciją ir atlikti montavimo darbus.</p>
-      </div>
-      <div class="about-item">
-        <h3>Vertybės</h3>
-        <p>Sklandus bendravimas, sąžiningumas ir patikimumas – mūsų darbo pagrindas.</p>
-      </div>
+    <div class="about-item">
+      <h3>Kokybė</h3>
+      <p>Dirbame tik su patikima įranga ir laikomės gamintojų standartų.</p>
     </div>
-    <div class="about-cta">
-      <a href="kontaktai.html" class="btn-primary">Susisiekite su mumis</a>
+    <div class="about-item">
+      <h3>Komanda</h3>
+      <p>Specialistai pasiruošę suteikti konsultacijas ir atlikti montavimo darbus.</p>
     </div>
+    <div class="about-item">
+      <h3>Vertybės</h3>
+      <p>Sąžiningumas, patikimumas ir sklandus bendravimas – mūsų pagrindas.</p>
+    </div>
+  </div>
+  <div class="about-cta">
+    <a href="kontaktai.html" class="btn-primary">Susisiekite su mumis</a>
   </div>
 </section>
 
-<!-- ================= MOBILE STICKY CTA ================= -->
 <div class="mobile-cta">
   <a href="tel:+37066565321">📞 Skambinti</a>
   <a href="kontaktai.html">💬 Gauti pasiūlymą</a>
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  © 2025 Oro Inžinerija
+<footer class="container" style="text-align:center; padding:30px 0; color:#334155;">
+  <p>© 2026 Oro Inžinerija</p>
+  <p>Tel: <a href="tel:+37066565321">+370 665 65321</a> | Email: <a href="mailto:zydrunas.rekuperacija@gmail.com">zydrunas.rekuperacija@gmail.com</a></p>
 </footer>
 
-<!-- ================= JS BURGER ================= -->
 <script>
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
-  if (burger && menu) {
-    burger.addEventListener("click", () => {
-      menu.classList.toggle("active");
-      burger.classList.toggle("open");
-    });
-  }
+const burger = document.getElementById("burger");
+const menu = document.getElementById("main-menu");
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  burger.classList.toggle("open");
+});
+document.querySelectorAll('.header-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if(menu.classList.contains('active')){
+      menu.classList.remove('active');
+      burger.classList.remove('open');
+    }
+  });
+});
 </script>
 <script src="js/main.js"></script>
 </body>
