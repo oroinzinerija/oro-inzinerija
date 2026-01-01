@@ -37,7 +37,15 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* leidžia mobiliai tvarkingai slinkti */
+  flex-wrap: wrap;
+}
+
+@media(max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 .logo-box {
