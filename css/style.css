@@ -87,10 +87,11 @@ a {
 
 /* ================= BURGER MENU MOBILE ================= */
 .burger {
-  display: none;
+  display: none; /* paliekame desktop */
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 1002; /* svarbu, kad burger būtų viršuje */
 }
 
 .burger span {
@@ -114,20 +115,37 @@ a {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* NAV ACTIVE FIX */
 .header-nav.active {
   display: flex;
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: 100%;
-  right: 20px;
+  top: 100%; /* viršuje po header */
+  left: 0;
+  right: 0;
   background: #fff;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1001;
 }
+/* ================= MEDIA QUERY MOBILE ================= */
+@media(max-width: 768px) {
+  .burger {
+    display: flex; /* rodom burger */
+  }
 
+  .header-nav {
+    display: none; /* slepiam default */
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-nav.active {
+    display: flex; /* rodom kai burger paspaustas */
+  }
+}
 /* ================= HERO ================= */
 .hero {
   display: flex;
