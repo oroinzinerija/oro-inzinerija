@@ -47,7 +47,7 @@ a {
 }
 
 .logo-box img {
-  height: 180px; /* Desktop logotipas */
+  height: 130px; /* Desktop logotipas */
   max-width: 100%;
   flex-shrink: 0; /* neleisti mažėti */
 }
