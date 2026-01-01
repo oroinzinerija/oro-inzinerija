@@ -80,14 +80,14 @@
 </footer>
 
 <script>
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
-  if (burger && menu) {
-    burger.addEventListener("click", () => {
-      menu.classList.toggle("active");
-      burger.classList.toggle("open");
-    });
-  }
+const burger = document.getElementById("burger");
+const menu = document.getElementById("main-menu");
+if(burger && menu){
+  burger.addEventListener("click", ()=>{
+    menu.classList.toggle("active");
+    burger.classList.toggle("open");
+  });
+}
 </script>
 <script src="js/main.js"></script>
 </body>
