@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Oro Inžinerija – Naudinga</title>
-  <meta name="description" content="Naudingi patarimai apie vėdinimą ir rekuperaciją visoje Lietuvoje.">
+  <meta name="description" content="Naudinga informacija apie vėdinimą, rekuperaciją ir energijos taupymą namuose.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-box">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo">
+      <img src="img/logo.png" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
@@ -27,51 +27,43 @@
       <a href="index.html">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
       <a href="iranga.html">Įranga</a>
-      <a href="naudinga.html">Naudinga</a>
+      <a href="naudinga.html" class="active">Naudinga</a>
       <a href="apie.html">Apie mus</a>
-      <a href="kontaktai.html" class="btn">Kontaktai</a>
+      <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
     </nav>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
+<section class="hero" style="background-color:#f9f9f9;">
   <div class="hero-content">
     <h1>Naudinga informacija</h1>
-    <p>Patarimai ir žinios apie vėdinimą ir rekuperaciją jūsų namams ar biurui.</p>
-    <div class="hero-buttons">
-      <a href="kontaktai.html" class="btn-primary">Gauti pasiūlymą</a>
-      <a href="paslaugos.html" class="btn-outline">Peržiūrėti paslaugas</a>
-    </div>
+    <p>Patarimai apie vėdinimą, rekuperaciją ir kaip užtikrinti švarų orą namuose.</p>
   </div>
 </section>
 
-<!-- ================= STRAIPSNIAI ================= -->
-<section class="useful-info">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Naudingi straipsniai</h2>
-      <p>Skaitykite ir sužinokite daugiau apie rekuperaciją, vėdinimą ir įrangos pasirinkimą.</p>
+<!-- ================= CONTENT ================= -->
+<section class="content-section container">
+  <div class="content-intro">
+    <h2>Naudingi patarimai</h2>
+    <p>Skaitykite mūsų patarimus ir gidus, kad jūsų namai būtų sveiki ir komfortiški.</p>
+  </div>
+  <div class="content-grid">
+    <div class="content-box">
+      <h3>Kaip pasirinkti rekuperatorių</h3>
+      <p>Patarimai, į ką atkreipti dėmesį renkantis įrangą.</p>
     </div>
-    <div class="info-grid">
-      <div class="info-item">
-        <h3>Kaip pasirinkti rekuperatorių?</h3>
-        <p>Geriausi patarimai, kaip pasirinkti tinkamą sistemą jūsų namams ar biurui.</p>
-        <a href="naudinga-detail1.html" class="btn-outline">Skaityti daugiau</a>
-      </div>
-      <div class="info-item">
-        <h3>Vėdinimo sistemos priežiūra</h3>
-        <p>Sužinokite, kaip išlaikyti savo sistemą efektyviai veikiančią ilgą laiką.</p>
-       <a href="naudinga-detail2.html" class="btn-outline">Skaityti daugiau</a>
-      </div>
-      <div class="info-item">
-        <h3>Energetiškai efektyvus vėdinimas</h3>
-        <p>Patarimai, kaip sumažinti sąnaudas ir užtikrinti švarų orą.</p>
-        <a href="naudinga-detail3.html" class="btn-outline">Skaityti daugiau</a>
-      </div>
+    <div class="content-box">
+      <h3>Vėdinimo sistemos priežiūra</h3>
+      <p>Kaip prižiūrėti filtrus ir išlaikyti oro kokybę.</p>
     </div>
-    <div class="useful-cta">
-      <a href="kontaktai.html" class="btn-primary">Konsultacija</a>
+    <div class="content-box">
+      <h3>Energijos taupymas</h3>
+      <p>Efektyvūs būdai sumažinti energijos sąnaudas naudojant rekuperatorius.</p>
+    </div>
+    <div class="content-box">
+      <h3>Dažniausios klaidos</h3>
+      <p>Ką vengti montuojant ar eksploatuojant vėdinimo sistemas.</p>
     </div>
   </div>
 </section>
@@ -79,24 +71,30 @@
 <!-- ================= MOBILE STICKY CTA ================= -->
 <div class="mobile-cta">
   <a href="tel:+37066565321">📞 Skambinti</a>
- <a href="mailto:zydrunas.rekuperacija@gmail.com">💬 Gauti pasiūlymą</a>
+  <a href="mailto:zydrunas.rekuperacija@gmail.com">💬 Rašyti el. paštu</a>
 </div>
 
 <!-- ================= FOOTER ================= -->
-<footer>
-  © 2025 Oro Inžinerija
+<footer class="container" style="text-align:center; padding:30px 0; color:#334155;">
+  <p>© 2026 Oro Inžinerija. Visos teisės saugomos.</p>
+  <p>Tel: <a href="tel:+37066565321">+370 665 65321</a> | Email: <a href="mailto:zydrunas.rekuperacija@gmail.com">zydrunas.rekuperacija@gmail.com</a></p>
 </footer>
 
-<!-- ================= JS BURGER ================= -->
 <script>
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
-  if (burger && menu) {
-    burger.addEventListener("click", () => {
-      menu.classList.toggle("active");
-      burger.classList.toggle("open");
-    });
-  }
+const burger = document.getElementById("burger");
+const menu = document.getElementById("main-menu");
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  burger.classList.toggle("open");
+});
+document.querySelectorAll('.header-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if(menu.classList.contains('active')){
+      menu.classList.remove('active');
+      burger.classList.remove('open');
+    }
+  });
+});
 </script>
 <script src="js/main.js"></script>
 </body>
