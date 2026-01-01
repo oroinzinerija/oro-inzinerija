@@ -37,6 +37,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* leidžia mobiliai tvarkingai slinkti */
 }
 
 .logo-box {
@@ -45,7 +46,8 @@ a {
 }
 
 .logo-box img {
-  height: 180px; /* 3 kartus didesnis logotipas */
+  height: 180px; /* Desktop logotipas */
+  max-width: 100%;
 }
 
 .header-contact {
@@ -90,6 +92,7 @@ a {
   background: #333;
   display: block;
   border-radius: 2px;
+  transition: 0.3s;
 }
 
 .burger.open span:nth-child(1) {
@@ -107,12 +110,13 @@ a {
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: 65px;
+  top: 100%;
   right: 20px;
   background: #fff;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  z-index: 1001;
 }
 
 /* ================= HERO ================= */
@@ -226,7 +230,7 @@ a {
   font-size: 1rem;
 }
 
-/* ================= GALLERY / ABOUT / CONTENT GRID ================= */
+/* ================= GALLERY / CONTENT GRID ================= */
 .about-grid,
 .content-grid {
   display: grid;
@@ -298,7 +302,7 @@ footer a {
   color: #fff;
 }
 
-/* ================= HEADER CONTACT REFACTOR ================= */
+/* ================= HEADER CONTACT ================= */
 .header-contact {
   display: flex;
   flex-direction: column;
@@ -320,15 +324,20 @@ footer a {
   .header-nav {
     display: none;
     flex-direction: column;
+    width: 100%;
+    text-align: left;
   }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .mobile-cta {
+  .header-nav.active {
     display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 10px 20px;
+    z-index: 1001;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   .header-flex {
     flex-direction: column;
@@ -337,5 +346,15 @@ footer a {
   }
   .header-contact {
     align-items: flex-start;
+    margin-top: 10px;
+  }
+  .hero {
+    padding: 60px 15px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
   }
 }
