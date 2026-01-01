@@ -69,6 +69,11 @@ a {
   flex-shrink: 0;
 }
 
+/* Paslepiame viršutinio logotipo tekstą "Oro Inžinerija" */
+.header-logo-text {
+  display: none;
+}
+
 /* Kontaktai šalia logotipo */
 .header-contact {
   font-size: 1.3rem;
@@ -316,6 +321,41 @@ footer p {
   font-weight: bold;
 }
 
+/* ================= FOOTER FLEX LOGO IR KONTAKTAI ================= */
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 50px;
+}
+
+.footer-logo img.logo-bottom {
+  height: 100px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  opacity: 0.8;
+}
+
 /* ================= STICKY CONTACT BAR ================= */
 .sticky-contact {
   position: fixed;
@@ -393,7 +433,6 @@ footer p {
     font-size: 1rem;
   }
 
-  /* MOBILE STICKY BAR - pakelti, kad neuzdengtų footer */
   .sticky-contact {
     bottom: 60px;
     font-size: 1rem;
@@ -418,7 +457,6 @@ footer p {
     font-size: 1rem;
   }
 
-  /* LOGO MOBILE ADJUSTMENTS */
   .logo-box img.logo-top {
     height: 80px;
   }
@@ -429,19 +467,16 @@ footer p {
 }
 
 /* ================= ADDITIONAL IMPROVEMENTS ================= */
-/* Logotipo ir kontaktų aligmentas viename lygyje */
 .header-flex .logo-box,
 .header-flex .header-contact {
   display: flex;
   align-items: center;
 }
 
-/* Spacing tarp logotipo ir kontaktų */
 .header-flex {
   justify-content: space-between;
 }
 
-/* Sticky juosta netrukdo footer tekstui */
 footer {
   padding-bottom: 100px; /* vietos sticky juostai mobiliems */
 }
