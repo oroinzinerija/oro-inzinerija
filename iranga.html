@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Oro Inžinerija – Įranga</title>
-  <meta name="description" content="Profesionalūs vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje.">
+  <meta name="description" content="Profesionalūs rekuperatoriai, vėdinimo sistemos ir priedai. Pasirinkite įrangą pagal kainą, energijos klasę ir funkcijas.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -37,8 +37,8 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Įranga ir sprendimai Jūsų namams</h1>
-    <p>Projektuojame ir tiekiame patikimą rekuperacijos įrangą visoje Lietuvoje</p>
+    <h1>Įranga Jūsų namams ir verslui</h1>
+    <p>Projektuojame, tiekiame ir montuojame patikimą rekuperacijos įrangą visoje Lietuvoje</p>
     <div class="hero-buttons">
       <a href="kontaktai.html" class="btn-primary">📞 Skambinti / Gauti pasiūlymą</a>
       <a href="rekuperacija-Vilnius.html" class="btn-outline">Rekuperacija Vilniuje</a>
@@ -47,32 +47,54 @@
   </div>
 </section>
 
-<!-- ================= ĮRANGA ================= -->
+<!-- ================= ĮRANGA / FILTRAI ================= -->
 <section class="services container">
   <div class="section-intro">
     <h2>Mūsų įranga</h2>
-    <p>Siūlome tik patikimą įrangą ir komponentus, užtikrinančius efektyvų vėdinimą.</p>
+    <p>Pasirinkite tinkamiausią įrangą pagal kainą, energijos klasę ir funkcijas. Visi mūsų rekuperatoriai yra modernūs, energiją taupantys ir su garantija.</p>
   </div>
-  <div class="service-grid">
-    <div class="service-item">
-      <h3>Rekuperatoriai</h3>
-      <p>Modernūs, energiją taupantys rekuperatoriai su garantija.</p>
-    </div>
-    <div class="service-item">
-      <h3>Vėdinimo sistemos</h3>
-      <p>Visos reikiamos detalės ir komponentai patikimam vėdinimui.</p>
-    </div>
-    <div class="service-item">
-      <h3>Priedai ir filtrai</h3>
-      <p>Filtrai, difuzoriai ir kiti reikalingi priedai.</p>
-    </div>
-    <div class="service-item">
-      <h3>Konsultacijos ir parinkimas</h3>
-      <p>Padedame pasirinkti tinkamiausią įrangą pagal poreikius.</p>
-    </div>
+
+  <!-- Paieška ir filtrai -->
+  <div class="equipment-filters">
+    <input type="text" id="search" placeholder="Ieškoti pagal modelį ar savybę">
+    <select id="priceFilter">
+      <option value="">Filtruoti pagal kainą</option>
+      <option value="low">Iki 500 €</option>
+      <option value="mid">500–1000 €</option>
+      <option value="high">Virš 1000 €</option>
+    </select>
+    <select id="energyFilter">
+      <option value="">Filtruoti pagal energijos klasę</option>
+      <option value="A++">A++</option>
+      <option value="A+">A+</option>
+      <option value="A">A</option>
+    </select>
+    <button id="applyFilters" class="btn-primary">Taikyti filtrus</button>
   </div>
-  <div class="services-cta">
-    <a href="kontaktai.html" class="btn-primary">Užsisakyti įrangą</a>
+
+  <!-- Įrangos sąrašas -->
+  <div class="equipment-grid">
+    <div class="equipment-item" data-price="high" data-energy="A++">
+      <img src="img/rekuperatorius1.jpg" alt="Rekuperatorius X100">
+      <h3>Rekuperatorius X100</h3>
+      <p>Kaina: 1200 €</p>
+      <p>Energijos klasė: A++</p>
+      <a href="kontaktai.html" class="btn-outline">Gauti pasiūlymą</a>
+    </div>
+    <div class="equipment-item" data-price="mid" data-energy="A+">
+      <img src="img/rekuperatorius2.jpg" alt="Rekuperatorius M200">
+      <h3>Rekuperatorius M200</h3>
+      <p>Kaina: 750 €</p>
+      <p>Energijos klasė: A+</p>
+      <a href="kontaktai.html" class="btn-outline">Gauti pasiūlymą</a>
+    </div>
+    <div class="equipment-item" data-price="low" data-energy="A">
+      <img src="img/rekuperatorius3.jpg" alt="Rekuperatorius E50">
+      <h3>Rekuperatorius E50</h3>
+      <p>Kaina: 450 €</p>
+      <p>Energijos klasė: A</p>
+      <a href="kontaktai.html" class="btn-outline">Gauti pasiūlymą</a>
+    </div>
   </div>
 </section>
 
@@ -162,6 +184,38 @@
     });
   });
 </script>
+
+<!-- ================= JS FILTRAVIMAS ================= -->
+<script>
+  const searchInput = document.getElementById('search');
+  const priceFilter = document.getElementById('priceFilter');
+  const energyFilter = document.getElementById('energyFilter');
+  const applyBtn = document.getElementById('applyFilters');
+  const items = document.querySelectorAll('.equipment-item');
+
+  function filterEquipment() {
+    const searchText = searchInput.value.toLowerCase();
+    const priceValue = priceFilter.value;
+    const energyValue = energyFilter.value;
+
+    items.forEach(item => {
+      const name = item.querySelector('h3').textContent.toLowerCase();
+      const matchesSearch = name.includes(searchText);
+      const matchesPrice = priceValue === "" || item.dataset.price === priceValue;
+      const matchesEnergy = energyValue === "" || item.dataset.energy === energyValue;
+
+      if (matchesSearch && matchesPrice && matchesEnergy) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+
+  applyBtn.addEventListener('click', filterEquipment);
+  searchInput.addEventListener('input', filterEquipment);
+</script>
+
 <script src="js/main.js"></script>
 </body>
 </html>
