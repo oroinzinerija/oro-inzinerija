@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Oro Inžinerija – Apie mus</title>
-  <meta name="description" content="Sužinokite daugiau apie „Oro Inžineriją“ – profesionalus vėdinimo ir rekuperacijos sprendimus Lietuvoje.">
+  <meta name="description" content="Oro Inžinerija – patikimi vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje. Sužinokite apie mūsų komandą, patirtį ir vertybes.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo-box">
-      <img src="img/logo.png" alt="Oro Inžinerija" class="logo" style="min-height:130px;">
+      <img src="img/logo.png" alt="Oro Inžinerija" class="logo">
       <span class="site-name">Oro Inžinerija</span>
     </div>
 
@@ -29,7 +29,7 @@
       <a href="iranga.html">Įranga</a>
       <a href="naudinga.html">Naudinga</a>
       <a href="apie.html" class="active">Apie mus</a>
-      <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
+      <a href="kontaktai.html" class="btn">Kontaktai</a>
     </nav>
   </div>
 </header>
@@ -38,60 +38,44 @@
 <section class="hero">
   <div class="hero-content">
     <h1>Apie „Oro Inžineriją“</h1>
-    <p>Profesionalūs vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje</p>
+    <p>Profesionalūs vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje – patikimumas, kokybė ir ekspertizė vienoje vietoje.</p>
+    <div class="hero-buttons">
+      <a href="kontaktai.html" class="btn-primary">📞 Susisiekti</a>
+      <a href="paslaugos.html" class="btn-outline">Peržiūrėti paslaugas</a>
+    </div>
   </div>
 </section>
 
-<!-- ================= ABOUT / MISSION ================= -->
+<!-- ================= APRAŠYMAS ================= -->
 <section class="about container">
   <div class="section-intro">
-    <h2>Mūsų misija</h2>
-    <p>Teikti profesionalias vėdinimo ir rekuperacijos paslaugas, užtikrinant kokybę, patikimumą ir komfortą kiekvienam klientui.</p>
+    <h2>Kas mes esame?</h2>
+    <p>„Oro Inžinerija“ – tai profesionali komanda, kuri daugiau nei 5 metus teikia aukštos kokybės vėdinimo ir rekuperacijos sprendimus. Dirbame tiek su individualiais namais, tiek su verslo objektais, užtikrindami patikimą ir efektyvų darbo rezultatą.</p>
   </div>
 
   <div class="about-grid">
     <div class="about-item">
-      <h3>Patirtis</h3>
-      <p>Dirbame daugiau nei 5 metus ir žinome, kaip teisingai įrengti vėdinimo sistemas.</p>
+      <h3>Mūsų misija</h3>
+      <p>Užtikrinti, kad kiekviena patalpa turėtų sveiką mikroklimatą, energiją taupančias sistemas ir patikimą įrangą.</p>
     </div>
     <div class="about-item">
-      <h3>Kokybė</h3>
-      <p>Naudojame tik patikimą įrangą ir laikomės gamintojų rekomendacijų.</p>
+      <h3>Vertybės</h3>
+      <p>Kokybė, patikimumas, atsakomybė ir klientų pasitenkinimas – tai mūsų darbo pagrindas.</p>
+    </div>
+    <div class="about-item">
+      <h3>Komanda</h3>
+      <p>Specialistai su ilgamete patirtimi vėdinimo, rekuperacijos ir įrangos srityse. Konsultuojame ir pasirūpiname profesionaliu montavimu.</p>
     </div>
     <div class="about-item">
       <h3>Garantija</h3>
-      <p>Suteikiame garantiją darbams ir sumontuotai įrangai.</p>
-    </div>
-    <div class="about-item">
-      <h3>Visa Lietuva</h3>
-      <p>Atliekame darbus visoje Lietuvoje – atvykstame ten, kur reikia.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= TEAM / DARBININKAI ================= -->
-<section class="team container">
-  <div class="section-intro">
-    <h2>Mūsų komanda</h2>
-    <p>Profesionalūs specialistai, pasiruošę įgyvendinti Jūsų projektus.</p>
-  </div>
-  <div class="content-grid">
-    <div class="content-box">
-      <img src="img/team1.jpg" alt="Komandos narys 1">
-      <h3>Zydrunas</h3>
-      <p>Montavimo ir projektavimo specialistas</p>
-    </div>
-    <div class="content-box">
-      <img src="img/team2.jpg" alt="Komandos narys 2">
-      <h3>Jonas</h3>
-      <p>Techninės priežiūros ekspertas</p>
+      <p>Visiems darbams ir sumontuotai įrangai suteikiame garantiją, kad klientai jaustųsi saugiai ir užtikrintai.</p>
     </div>
   </div>
 </section>
 
 <!-- ================= CTA ================= -->
-<section class="about-cta container">
-  <a href="kontaktai.html" class="btn-primary">Susisiekite su mumis</a>
+<section class="services-cta container">
+  <a href="kontaktai.html" class="btn-primary">Gauti pasiūlymą / konsultaciją</a>
 </section>
 
 <!-- ================= MOBILE STICKY CTA ================= -->
@@ -110,12 +94,14 @@
 <script>
   const burger = document.getElementById("burger");
   const menu = document.getElementById("main-menu");
+
   if (burger && menu) {
     burger.addEventListener("click", () => {
       menu.classList.toggle("active");
       burger.classList.toggle("open");
     });
   }
+
   document.querySelectorAll('.header-nav a').forEach(link => {
     link.addEventListener('click', () => {
       if(menu.classList.contains('active')){
@@ -125,6 +111,7 @@
     });
   });
 </script>
+
 <script src="js/main.js"></script>
 </body>
 </html>
