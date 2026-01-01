@@ -1,60 +1,32 @@
-// Burger menu
-const burger = document.getElementById("burger");
-const menu = document.getElementById("main-menu");
-if (burger && menu) {
-  burger.addEventListener("click", () => {
+// ==================== BURGER MENU ====================
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("main-menu");
+
+  if (!burger || !menu) return; // jei elementai neegzistuoja, nutraukiame
+
+  // Atidarome / uždarome meniu paspaudus burger ikoną
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation(); // nesukelia click ant body
     menu.classList.toggle("active");
     burger.classList.toggle("open");
   });
-}
 
-// Filtrai
-const manufacturerSelect = document.getElementById("manufacturer");
-const airflowSelect = document.getElementById("airflow");
-const efficiencySelect = document.getElementById("efficiency");
-const boxes = document.querySelectorAll(".content-box");
-
-function filterBoxes() {
-  const mVal = manufacturerSelect?.value;
-  const aVal = airflowSelect?.value;
-  const eVal = efficiencySelect?.value;
-
-  boxes.forEach(box => {
-    let show = true;
-
-    if (mVal && mVal !== "all" && box.dataset.manufacturer !== mVal) show = false;
-
-    if (aVal && aVal !== "all") {
-      const airflow = parseInt(box.dataset.airflowValue);
-      if (aVal === "0-200" && airflow > 200) show = false;
-      if (aVal === "200-400" && (airflow < 200 || airflow > 400)) show = false;
-      if (aVal === "400+" && airflow < 400) show = false;
+  // Uždarome meniu, jei paspaudžiame už jo
+  document.body.addEventListener("click", (e) => {
+    if (menu.classList.contains("active") && !menu.contains(e.target) && e.target !== burger) {
+      menu.classList.remove("active");
+      burger.classList.remove("open");
     }
-
-    if (eVal && eVal !== "all" && box.dataset.efficiency !== eVal) show = false;
-
-    box.style.display = show ? "block" : "none";
   });
-}
 
-manufacturerSelect?.addEventListener("change", filterBoxes);
-airflowSelect?.addEventListener("change", filterBoxes);
-efficiencySelect?.addEventListener("change", filterBoxes);
-
-// Scroll efektas
-window.addEventListener("scroll", () => {
-  const header = document.querySelector(".site-header");
-  if(window.scrollY > 50){
-    header?.classList.add("scrolled");
-  } else {
-    header?.classList.remove("scrolled");
-  }
-});
-
-// Aktyvus puslapis nav meniu
-const navLinks = document.querySelectorAll(".header-nav a");
-navLinks.forEach(link => {
-  if(link.href === window.location.href){
-    link.classList.add("active");
-  }
+  // Uždarome meniu paspaudus nuorodą viduje
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        burger.classList.remove("open");
+      }
+    });
+  });
 });
