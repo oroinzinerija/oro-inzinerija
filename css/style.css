@@ -65,7 +65,12 @@ a {
 .header-contact p {
   margin: 0;
 }
-
+/* MOBILE */
+@media(max-width: 768px) {
+  .logo-box img {
+    height: 80px; /* tinka mobiliesiems */
+  }
+}
 /* ================= NAVIGATION ================= */
 .header-nav {
   display: flex;
