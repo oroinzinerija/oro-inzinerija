@@ -35,7 +35,7 @@ body {
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 .logo {
   width: 105px;
@@ -44,9 +44,7 @@ body {
   border-radius: 6px;
 }
 .site-name {
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
+  display: none;
 }
 .header-nav {
   display: flex;
