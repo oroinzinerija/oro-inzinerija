@@ -1,366 +1,246 @@
-/* =====================================================
-   RESET & GLOBAL
-===================================================== */
+/* === Reset ir baziniai nustatymai === */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #1f2933;
-  background: #f8fafc;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-/* =====================================================
-   CONTAINER
-===================================================== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* === Header === */
 .site-header {
-  background: #0f172a;
-  padding: 12px 0;
+  background-color: #005bbb;
+  color: #fff;
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .logo {
-  width: 70px;
-  background: #fff;
-  padding: 6px;
-  border-radius: 6px;
+  height: 50px;
 }
 
 .site-name {
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .header-nav a {
+  margin-left: 20px;
   color: #fff;
-  text-decoration: none;
-  font-size: 15px;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
 .header-nav a:hover {
-  color: #22c55e;
+  color: #ffd700;
 }
 
-.header-nav .btn {
-  background: #22c55e;
-  padding: 6px 14px;
+.btn {
+  padding: 8px 16px;
+  background-color: #ffd700;
+  color: #005bbb;
   border-radius: 4px;
-  transition: background 0.3s;
+  font-weight: bold;
 }
 
-.header-nav .btn:hover {
-  background: #16a34a;
-}
-
-/* =====================================================
-   BURGER MENU
-===================================================== */
+/* Burger menu */
 .burger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
   cursor: pointer;
 }
 
 .burger span {
   width: 25px;
   height: 3px;
-  background: #fff;
-  border-radius: 2px;
-}
-
-/* =====================================================
-   HERO SECTION
-===================================================== */
-.hero {
-  background: linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)),
-              url('../img/titulinis.png') center/cover no-repeat;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero-content {
-  max-width: 700px;
-}
-
-.hero h1 {
-  color: #fff;
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: #e5e7eb;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.hero-buttons a {
-  margin: 10px;
-  padding: 12px 26px;
-  display: inline-block;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
+  background-color: #fff;
+  display: block;
   transition: all 0.3s;
 }
 
-/* =====================================================
-   BUTTONS
-===================================================== */
-.btn-primary {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #fff;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 600;
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.header-nav.active {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* === Hero sekcija === */
+.hero {
+  background-color: #e0f0ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* === Content section === */
+.content-section {
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.content-intro p {
+  margin-bottom: 30px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.content-box {
+  background-color: #fff;
+  padding: 25px;
   border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+}
+
+.content-box h3 {
+  margin-bottom: 10px;
+  color: #005bbb;
+}
+
+.content-box p {
+  margin-bottom: 15px;
+}
+
+/* === .article-highlight === */
+.article-highlight {
+  background-color: #fffbdd;
+  border-left: 4px solid #ffd700;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.article-highlight h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.article-highlight ul {
+  list-style: disc inside;
+}
+
+.article-highlight li {
+  margin-bottom: 8px;
+}
+
+/* === CTA mygtukai === */
+.btn-primary {
   display: inline-block;
-  text-decoration: none;
-  transition: all 0.35s;
+  padding: 10px 20px;
+  background-color: #005bbb;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #16a34a, #15803d);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  background-color: #004299;
 }
 
 .btn-outline {
   display: inline-block;
-  padding: 10px 22px;
-  border: 2px solid #1AA5AC;
-  color: #1AA5AC;
-  background-color: transparent;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  padding: 8px 16px;
+  color: #005bbb;
+  border: 2px solid #005bbb;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
 
 .btn-outline:hover {
-  background-color: #1AA5AC;
-  color: #ffffff;
-}
-
-/* =====================================================
-   SECTIONS
-===================================================== */
-section {
-  padding: 70px 20px;
-}
-
-h1, h2, h3 {
-  margin-bottom: 20px;
-}
-
-/* =====================================================
-   CONTENT GRID (Naudinga / Straipsniai / Services)
-===================================================== */
-.content-grid, .service-grid, .trust-grid, .process-steps {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.content-box, .service-item, .trust-item, .process-step {
-  background: #fff;
-  border-radius: 14px;
-  padding: 25px 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  text-align: center;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.content-box img, .service-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  filter: brightness(0.95);
-  transition: transform 0.35s ease, filter 0.35s ease;
-}
-
-.content-box:hover img {
-  transform: scale(1.07);
-  filter: brightness(1);
-}
-
-.content-box h3, .service-item h3, .trust-item h3, .process-step h3 {
-  margin: 15px 0 10px;
-  color: #1a1a1a;
-  transition: color 0.3s;
-}
-
-.content-box:hover h3 {
-  color: #22c55e;
-}
-
-.content-box p, .service-item p, .trust-item p, .process-step p {
-  color: #334155;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-.content-box ul {
-  text-align: left;
-  padding-left: 20px;
-  margin-bottom: 10px;
-}
-
-.content-box ul li {
-  margin-bottom: 6px;
-}
-
-.content-box .btn-primary {
-  margin: 10px 0;
-  padding: 12px 18px;
-  width: auto;
-}
-
-/* Hover efektai visiems boxams */
-.content-box:hover,
-.service-item:hover,
-.trust-item:hover,
-.process-step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* =====================================================
-   CTA SECTIONS
-===================================================== */
-.services-cta {
-  text-align: center;
-  margin-top: 40px;
-}
-
-/* Highlight / patarimai box */
-.article-highlight {
-  background: #f4fafa;
-  border-left: 4px solid #1AA5AC;
-  padding: 15px;
-  margin: 20px 0;
-}
-
-/* Grįžti į visus straipsnius */
-.article-back a {
-  text-decoration: none;
-  color: #1AA5AC;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.article-back a:hover {
-  color: #15803d;
-}
-
-/* =====================================================
-   MOBILE CTA
-===================================================== */
-.mobile-cta {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #22c55e;
-  justify-content: space-around;
-  padding: 12px 0;
-  z-index: 999;
-}
-
-.mobile-cta a {
+  background-color: #005bbb;
   color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 16px;
 }
 
-/* =====================================================
-   MEDIA QUERIES
-===================================================== */
-@media (max-width: 992px) {
-  .content-box img { height: 190px; }
+/* === Footer === */
+footer {
+  background-color: #005bbb;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
 
+/* === Responsive === */
 @media (max-width: 768px) {
-  .burger { display: flex; }
-
+  .burger {
+    display: flex;
+  }
+  
   .header-nav {
     display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #22c55e;
     flex-direction: column;
-    width: 220px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    gap: 15px;
+    margin-top: 15px;
   }
 
-  .header-nav.active { display: flex; }
-
-  .header-nav a {
-    color: #0f172a;
-    padding: 14px 16px;
-    margin: 0;
-    border-bottom: 1px solid rgba(15,23,42,0.15);
+  .content-grid {
+    grid-template-columns: 1fr;
   }
-
-  .hero { min-height: 55vh; background-position: center 30%; }
-  .hero h1 { font-size: 1.6rem; }
-  .hero p { font-size: 1rem; }
-
-  .service-grid, .trust-grid, .process-steps, .content-grid { gap: 20px; }
-  .content-box img { height: 180px; }
-
-  .mobile-cta { display: flex; }
-}
-
-@media (max-width: 480px) {
-  .content-box h3 { font-size: 1rem; }
-  .content-box p { font-size: 0.9rem; }
-  .content-box .btn-primary { width: 100%; text-align: center; }
 }
