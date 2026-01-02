@@ -1,7 +1,10 @@
 // ==================== BURGER MENU ====================
 document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("main-menu");
+  const burger =
+    document.getElementById("burger") || document.querySelector(".burger");
+
+  const menu =
+    document.getElementById("main-menu") || document.querySelector(".header-nav");
 
   if (!burger || !menu) return; // jei elementai neegzistuoja, nutraukiame
 
@@ -14,7 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Uždarome meniu, jei paspaudžiame už jo
   document.body.addEventListener("click", (e) => {
-    if (menu.classList.contains("active") && !menu.contains(e.target) && e.target !== burger) {
+    if (
+      menu.classList.contains("active") &&
+      !menu.contains(e.target) &&
+      !burger.contains(e.target)
+    ) {
       menu.classList.remove("active");
       burger.classList.remove("open");
     }
