@@ -123,6 +123,7 @@ a {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* ================= NAV ACTIVE ================= */
 .header-nav.active {
   display: flex;
   flex-direction: column;
@@ -324,34 +325,6 @@ footer p {
   font-size: 1rem;
 }
 
-@media(max-width:768px){
-  .footer-contact {
-    text-align: center;
-    align-items: center;
-  }
-
-  .footer-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo-box img.logo-top {
-    height: 80px;
-  }
-
-  .logo-box img.logo-bottom {
-    height: 60px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
 /* ================= STICKY CONTACT / MOBILE CTA ================= */
 .sticky-contact,
 .mobile-cta {
@@ -400,5 +373,15 @@ footer p {
     padding: 15px 20px;
     border-top: 1px solid #ddd;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Header nav nuorodų pritaikymas mobiliai */
+  .header-nav a {
+    padding: 12px 15px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    border-radius: 0;
+    font-size: 1.1rem;
   }
 }
