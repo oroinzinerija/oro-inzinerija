@@ -63,16 +63,10 @@
   </div>
 </section>
 
-<!-- MOBILE STICKY CTA -->
-<div class="mobile-cta">
-  <a href="tel:+37066565321">📞 Skambinti</a>
-  <a href="kontaktai.html">💬 Gauti pasiūlymą</a>
-</div>
-
 <!-- ================= FOOTER ================= -->
 <footer class="container footer" style="display:flex; justify-content:space-between; align-items:center; padding:30px 20px; background:#f8f9fa; font-family: Arial, sans-serif; flex-wrap:wrap;">
   <div class="footer-logo" style="flex:1;">
-    <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" style="height:180px;">
+    <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" style="height:150px;">
   </div>
   <div class="footer-contact" style="flex:1; text-align:right; font-size:1.2rem; line-height:1.6;">
     <span>Tel: <a href="tel:+37066565321" style="color:#334155; text-decoration:none; font-weight:bold;">+370 665 65321</a></span> |
@@ -82,25 +76,6 @@
     Visos teisės saugomos © 2026 Oro Inžinerija
   </div>
 </footer>
-
-<script>
-const burger = document.getElementById("burger");
-const menu = document.getElementById("main-menu");
-if(burger && menu){
-  burger.addEventListener("click", ()=>{
-    menu.classList.toggle("active");
-    burger.classList.toggle("open");
-  });
-}
-document.querySelectorAll('.header-nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    if(menu.classList.contains('active')){
-      menu.classList.remove('active');
-      burger.classList.remove('open');
-    }
-  });
-});
-</script>
 
 <script src="js/main.js"></script>
 </body>
