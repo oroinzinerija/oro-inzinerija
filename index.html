@@ -9,27 +9,29 @@
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
-  <div class="logo-box">
-  <a href="index.html">
-    <img src="1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Logotipas" class="logo-top">
-  </a>
-</div>
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    <div class="logo-box">
+      <a href="index.html">
+        <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo-top" style="height:60px;">
+      </a>
+    </div>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav class="header-nav" id="main-menu">
       <a href="index.html" class="active">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
       <a href="iranga.html">Įranga</a>
       <a href="naudinga.html">Naudinga</a>
       <a href="apie.html">Apie mus</a>
-      <a href="kontaktai.html" class="btn-primary">Gauti pasiūlymą</a>
+      <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
     </nav>
-     <!-- Mobilus meniu mygtukas -->
-    <div class="burger" id="burger">
-      ☰
-    </div>
   </div>
 </header>
 
@@ -75,26 +77,17 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="container footer" style="display:flex; justify-content:space-between; align-items:center; padding:30px 20px; background:#f8f9fa; font-family: Arial, sans-serif; flex-wrap:wrap;">
-
-  <!-- LOGO -->
   <div class="footer-logo" style="flex:1;">
-    <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" style="height:180px;"> <!-- padidintas 3x -->
+    <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" style="height:180px;">
   </div>
-
-  <!-- KONTAKTAI -->
   <div class="footer-contact" style="flex:1; text-align:right; font-size:1.2rem; line-height:1.6;">
     <span>Tel: <a href="tel:+37066565321" style="color:#334155; text-decoration:none; font-weight:bold;">+370 665 65321</a></span> |
     <span>Email: <a href="mailto:zydrunas.rekuperacija@gmail.com" style="color:#334155; text-decoration:none; font-weight:bold;">zydrunas.rekuperacija@gmail.com</a></span>
   </div>
-
-  <!-- VISOS TEISĖS SAUGOMOS APAČIOJE -->
   <div style="width:100%; text-align:center; margin-top:15px; font-size:0.95rem; color:#667085;">
     Visos teisės saugomos © 2026 Oro Inžinerija
   </div>
-
 </footer>
-
-
 
 <script>
 const burger = document.getElementById("burger");
@@ -105,7 +98,16 @@ if(burger && menu){
     burger.classList.toggle("open");
   });
 }
+document.querySelectorAll('.header-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if(menu.classList.contains('active')){
+      menu.classList.remove('active');
+      burger.classList.remove('open');
+    }
+  });
+});
 </script>
+
 <script src="js/main.js"></script>
 </body>
 </html>
