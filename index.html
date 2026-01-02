@@ -18,6 +18,14 @@
       </a>
     </div>
 
+    <!-- BURGER MYGTUKAS TELEFONE -->
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- NAVIGACIJA -->
     <nav class="header-nav" id="main-menu">
       <a href="index.html" class="active">Pagrindinis</a>
       <a href="paslaugos.html">Paslaugos</a>
@@ -29,7 +37,7 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
     <h1>Profesionalūs vėdinimo ir rekuperacijos sprendimai visoje Lietuvoje</h1>
@@ -41,7 +49,7 @@
   </div>
 </section>
 
-<!-- PASLAUGŲ BLOKAS -->
+<!-- ================= PASLAUGŲ BLOKAS ================= -->
 <section class="content-section">
   <div class="container">
     <div class="section-intro">
@@ -49,14 +57,23 @@
       <p>Įgyvendiname projektus nuo A iki Z, teikiame įrangą ir konsultacijas.</p>
     </div>
     <div class="about-grid">
-      <div class="about-item"><h3>Montavimas</h3><p>Profesionalus vėdinimo sistemų montavimas.</p></div>
-      <div class="about-item"><h3>Įranga</h3><p>Patikimos įrangos tiekimas ir pardavimas.</p></div>
-      <div class="about-item"><h3>Techninė priežiūra</h3><p>Reguliari priežiūra ir garantinis aptarnavimas.</p></div>
+      <div class="about-item">
+        <h3>Montavimas</h3>
+        <p>Profesionalus vėdinimo sistemų montavimas.</p>
+      </div>
+      <div class="about-item">
+        <h3>Įranga</h3>
+        <p>Patikimos įrangos tiekimas ir pardavimas.</p>
+      </div>
+      <div class="about-item">
+        <h3>Techninė priežiūra</h3>
+        <p>Reguliari priežiūra ir garantinis aptarnavimas.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ================= CTA ================= -->
 <section class="services-cta">
   <div class="container" style="text-align:center;">
     <a href="kontaktai.html" class="btn-primary">Kreiptis dėl konsultacijos</a>
@@ -65,17 +82,44 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="container footer" style="display:flex; justify-content:space-between; align-items:center; padding:30px 20px; background:#f8f9fa; font-family: Arial, sans-serif; flex-wrap:wrap;">
+  <!-- LOGO -->
   <div class="footer-logo" style="flex:1;">
     <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" style="height:150px;">
   </div>
+
+  <!-- KONTAKTAI -->
   <div class="footer-contact" style="flex:1; text-align:right; font-size:1.2rem; line-height:1.6;">
     <span>Tel: <a href="tel:+37066565321" style="color:#334155; text-decoration:none; font-weight:bold;">+370 665 65321</a></span> |
     <span>Email: <a href="mailto:zydrunas.rekuperacija@gmail.com" style="color:#334155; text-decoration:none; font-weight:bold;">zydrunas.rekuperacija@gmail.com</a></span>
   </div>
+
+  <!-- VISOS TEISĖS SAUGOMOS APAČIOJE -->
   <div style="width:100%; text-align:center; margin-top:15px; font-size:0.95rem; color:#667085;">
     Visos teisės saugomos © 2026 Oro Inžinerija
   </div>
 </footer>
+
+<!-- ================= JS BURGER ================= -->
+<script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("main-menu");
+
+  if (burger && menu) {
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      burger.classList.toggle("open");
+    });
+  }
+
+  document.querySelectorAll('.header-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(menu.classList.contains('active')){
+        menu.classList.remove('active');
+        burger.classList.remove('open');
+      }
+    });
+  });
+</script>
 
 <script src="js/main.js"></script>
 </body>
