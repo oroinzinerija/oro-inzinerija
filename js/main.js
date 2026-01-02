@@ -1,10 +1,7 @@
 // ==================== BURGER MENU ====================
 document.addEventListener("DOMContentLoaded", () => {
-  const burger =
-    document.getElementById("burger") || document.querySelector(".burger");
-
-  const menu =
-    document.getElementById("main-menu") || document.querySelector(".header-nav");
+  const burger = document.getElementById("burger") || document.querySelector(".burger");
+  const menu = document.getElementById("main-menu") || document.querySelector(".header-nav");
 
   if (!burger || !menu) return; // jei elementai neegzistuoja, nutraukiame
 
@@ -16,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Uždarome meniu, jei paspaudžiame už jo
-  document.body.addEventListener("click", (e) => {
+  document.addEventListener("click", (e) => {
     if (
       menu.classList.contains("active") &&
       !menu.contains(e.target) &&
@@ -30,10 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Uždarome meniu paspaudus nuorodą viduje
   menu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-        burger.classList.remove("open");
-      }
+      menu.classList.remove("active");
+      burger.classList.remove("open");
     });
   });
 });
