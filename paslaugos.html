@@ -2,9 +2,11 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Paslaugos – Oro Inžinerija</title>
-  <meta name="description" content="Rekuperacijos ir vėdinimo paslaugos: montavimas, projektavimas, priežiūra visoje Lietuvoje.">
+  <title>Oro Inžinerija – Mūsų paslaugos</title>
+  <meta name="description" content="Profesionalus rekuperacijos ir vėdinimo sistemų montavimas visoje Lietuvoje. Sužinokite mūsų paslaugas.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,9 +14,11 @@
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
-    <a href="index.html">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo-top" style="height:120px;">
-    </a>
+    <div class="logo-box">
+      <a href="index.html">
+        <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo-top">
+      </a>
+    </div>
 
     <div class="burger" id="burger">
       <span></span><span></span><span></span>
@@ -22,7 +26,7 @@
 
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
-      <a href="paslaugos.html" class="active">Paslaugos</a>
+      <a href="paslaugos.html">Paslaugos</a>
       <a href="darbai.html">Mūsų darbai</a>
       <a href="iranga.html">Įranga</a>
       <a href="naudinga.html">Naudinga</a>
@@ -35,44 +39,50 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Mūsų teikiamos paslaugos</h1>
-    <p>Visi rekuperacijos sprendimai – nuo A iki Z</p>
+    <h1>Mūsų paslaugos</h1>
+    <p>Profesionalus rekuperacijos ir vėdinimo sistemų montavimas visoje Lietuvoje</p>
+    <div class="hero-buttons">
+      <a href="#skaiciuokle" class="btn-primary">Skaičiuoti kainą</a>
+      <a href="tel:+37066565321" class="btn-outline">Skambinti dabar</a>
+    </div>
   </div>
 </section>
 
-<!-- ================= PASLAUGOS TURINYS ================= -->
-<section class="content-section container">
-  <div class="section-intro">
-    <h2>Paslaugos</h2>
-    <p>Viskas nuo projekto iki įrangos paleidimo</p>
-  </div>
-
-  <div class="services-list">
-
-    <div class="service-row">
-      <img src="img/IMG_5109.png" alt="Individualus namas">
-      <div class="service-text">
-        <h3>Individualus namas</h3>
-        <p>Efektyvi sistema su šilumos atgavimu.</p>
-      </div>
+<!-- ================= PASLAUGOS ================= -->
+<section class="content-section" style="background:#f7f9fc;">
+  <div class="container">
+    <div class="section-intro">
+      <h2>Paslaugos, kurias teikiame</h2>
+      <p>Viskas nuo projekto iki paleidimo</p>
     </div>
 
-    <div class="service-row reverse">
-      <img src="img/IMG_5110.png" alt="Biuro patalpos">
-      <div class="service-text">
-        <h3>Biuro patalpos</h3>
-        <p>Komfortas darbuotojams ir energijos taupymas.</p>
-      </div>
-    </div>
+    <div class="services-list">
 
-    <div class="service-row">
-      <img src="img/IMG_5111.png" alt="Butų kompleksas">
-      <div class="service-text">
-        <h3>Butų kompleksas</h3>
-        <p>Individualūs sprendimai kiekvienam butui.</p>
+      <div class="service-row">
+        <img src="img/IMG_5109.png" alt="Individualus namas">
+        <div class="service-text">
+          <h3>Individualus namas</h3>
+          <p>Efektyvi sistema su šilumos atgavimu.</p>
+        </div>
       </div>
-    </div>
 
+      <div class="service-row reverse">
+        <img src="img/IMG_5110.png" alt="Biuro patalpos">
+        <div class="service-text">
+          <h3>Biuro patalpos</h3>
+          <p>Komfortas darbuotojams ir energijos taupymas.</p>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <img src="img/IMG_5111.png" alt="Butų kompleksas">
+        <div class="service-text">
+          <h3>Butų kompleksas</h3>
+          <p>Individualūs sprendimai kiekvienam butui.</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -81,7 +91,7 @@
   <div class="container">
     <div class="section-intro">
       <h2>Rekuperacijos kainos skaičiuoklė</h2>
-      <p>Preliminarus pasiūlymas per 1 minutę</p>
+      <p>Preliminarus pasiūlymas per 1 darbo diena</p>
     </div>
 
     <form class="contact-form">
@@ -100,7 +110,7 @@
       <button class="btn-primary">Gauti pasiūlymą</button>
     </form>
 
-    <p style="text-align:center;font-size:1rem;color:#334155;margin-top:15px;">
+    <p style="text-align:center;font-size:0.95rem;color:#6b7280;margin-top:15px;">
       📞 Susisieksime per 1 darbo dieną
     </p>
   </div>
@@ -119,14 +129,14 @@
 <footer class="footer">
   <div class="container footer-flex">
     <div class="footer-logo">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" style="height:120px;">
+      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo-bottom">
     </div>
     <div class="footer-contact">
       <span>Tel: <a href="tel:+37066565321">+370 665 65321</a></span>
       <span>Email: <a href="mailto:zydrunas.rekuperacija@gmail.com">zydrunas.rekuperacija@gmail.com</a></span>
     </div>
   </div>
-  <div style="text-align:center;font-size:0.95rem;color:#9ca3af;margin-top:10px;">
+  <div style="text-align:center;font-size:0.9rem;color:#9ca3af;">
     Visos teisės saugomos © 2026 Oro Inžinerija
   </div>
 </footer>
@@ -137,7 +147,7 @@
   <a href="#skaiciuokle">💬 Gauti pasiūlymą</a>
 </div>
 
-<!-- ================= JS BURGER ================= -->
+<!-- ================= JS ================= -->
 <script>
 const burger = document.getElementById("burger");
 const menu = document.getElementById("main-menu");
