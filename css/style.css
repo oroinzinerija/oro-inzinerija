@@ -65,7 +65,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
 }
 
 h2 {
@@ -73,13 +73,13 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem; /* padidinta h3 dydis service-text */
+  font-size: 1.2rem;
 }
 
 p {
-  margin: 0;
+  margin: 0.5rem 0;
   color: var(--text-muted);
-  font-size: 1.05rem; /* didesnis skaitymui */
+  font-size: 1rem;
 }
 
 /* =====================================================
@@ -89,7 +89,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.96);
+  background: rgba(255,255,255,0.98);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-sm);
 }
@@ -102,8 +102,8 @@ p {
 }
 
 .logo-top {
-  height: 120px; /* vienodas kaip footer */
-  max-width: 180px;
+  height: 120px;
+  max-width: 220px;
 }
 
 /* =====================================================
@@ -127,7 +127,7 @@ p {
 }
 
 .header-nav .btn-primary {
-  padding: 9px 22px;
+  padding: 10px 24px;
   border-radius: 28px;
 }
 
@@ -172,6 +172,17 @@ p {
   position: relative;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  width: 120%;
+  height: 120px;
+  background: var(--bg-main);
+  transform: translateX(-50%) skewY(-3deg);
+}
+
 .hero-content {
   max-width: 760px;
   margin: 0 auto;
@@ -179,8 +190,15 @@ p {
 
 .hero p {
   margin: 20px 0 36px;
-  font-size: 1.15rem;
-  color: rgba(255,255,255,0.95);
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* =====================================================
@@ -211,13 +229,6 @@ p {
 .btn-outline {
   border: 2px solid rgba(255,255,255,0.85);
   color: #fff;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 /* =====================================================
@@ -252,75 +263,11 @@ p {
   box-shadow: var(--shadow-md);
   padding: 28px 24px;
   transition: transform var(--transition);
+  text-align: center;
 }
 
 .about-item:hover {
   transform: translateY(-8px);
-}
-
-/* =====================================================
-   SERVICES PAGE
-===================================================== */
-.services-list {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
-.service-row {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.service-row.reverse {
-  flex-direction: row-reverse;
-}
-
-.service-row img {
-  width: 80px; /* pakeista nuo 300 */
-  height: auto;
-  border-radius: 12px;
-  background: transparent;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.service-text {
-  max-width: 600px;
-}
-
-.service-text h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.service-text p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #334155;
-}
-
-/* =====================================================
-   CALCULATOR
-===================================================== */
-.contact-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
-.contact-form select,
-.contact-form input {
-  padding: 12px 16px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
-  min-width: 150px;
-}
-
-.contact-form button {
-  cursor: pointer;
 }
 
 /* =====================================================
@@ -337,10 +284,11 @@ p {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+  align-items: center;
 }
 
 .footer-logo img {
-  height: 120px; /* pakeista 120px */
+  height: 120px;
 }
 
 .footer-contact span {
@@ -418,17 +366,6 @@ p {
     padding: 95px 20px;
   }
 
-  .service-row,
-  .service-row.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .service-row img {
-    width: 100%;
-    max-width: 80px; /* nuotrauka mobiliui */
-  }
-
   .mobile-cta {
     display: flex;
     position: fixed;
@@ -440,5 +377,56 @@ p {
 
   body {
     padding-bottom: 60px;
+  }
+}
+
+/* =====================================================
+   SERVICES PAGE
+===================================================== */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-row img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.service-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.service-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-row img {
+    margin-bottom: 12px;
   }
 }
