@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Kontaktai – Oro Inžinerija | Rekuperacijos specialistai</title>
-  <meta name="description" content="Susisiekite su Oro Inžinerija – rekuperacijos ir vėdinimo specialistais Lietuvoje. Nemokama konsultacija ir individualus pasiūlymas.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Susisiekite su Oro Inžinerija – rekuperacijos ir vėdinimo specialistais. Dirbame Kaune ir visoje Lietuvoje. Nemokama konsultacija.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,14 +15,20 @@
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-flex">
+
     <div class="logo-box">
       <a href="index.html">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo-top" style="height:120px;">
+        <img 
+          src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" 
+          alt="Oro Inžinerija – Rekuperacija"
+          class="logo-top"
+          loading="eager">
+      </a>
     </div>
 
-    <div class="burger" id="burger">
+    <button class="burger" id="burger" aria-label="Atidaryti meniu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
 
     <nav class="header-nav" id="main-menu">
       <a href="index.html">Pagrindinis</a>
@@ -31,6 +39,7 @@
       <a href="apie.html">Apie mus</a>
       <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
     </nav>
+
   </div>
 </header>
 
@@ -38,9 +47,10 @@
 <section class="hero">
   <div class="hero-content">
     <h1>Susisiekite su „Oro Inžinerija“</h1>
-    <p>Nemokama konsultacija • Individualus pasiūlymas • Darbai visoje Lietuvoje</p>
+    <p>Nemokama konsultacija • Individualūs sprendimai • Visa Lietuva</p>
+
     <div class="hero-buttons">
-      <a href="tel:+37066565321" class="btn-primary">📞 Skambinti dabar</a>
+      <a href="tel:+37066565321" class="btn-primary">📞 Skambinti</a>
       <a href="#forma" class="btn-outline">✉️ Gauti pasiūlymą</a>
     </div>
   </div>
@@ -49,90 +59,122 @@
 <!-- ================= KONTAKTAI ================= -->
 <section class="content-section">
   <div class="container">
+
     <div class="about-grid">
+
       <div class="about-item">
         <h3>Telefonas</h3>
-        <p><a href="tel:+37066565321"><strong>+370 665 65321</strong></a></p>
-        <p>Skambinkite – atsakome greitai</p>
+        <p>
+          <a href="tel:+37066565321"><strong>+370 665 65321</strong></a>
+        </p>
+        <p>Skambinkite darbo dienomis</p>
       </div>
+
       <div class="about-item">
         <h3>El. paštas</h3>
-        <p><a href="mailto:zydrunas.rekuperacija@gmail.com"><strong>zydrunas.rekuperacija@gmail.com</strong></a></p>
+        <p>
+          <a href="mailto:zydrunas.rekuperacija@gmail.com">
+            <strong>zydrunas.rekuperacija@gmail.com</strong>
+          </a>
+        </p>
         <p>Atsakome per 1 darbo dieną</p>
       </div>
+
       <div class="about-item">
-        <h3>Darbo zona</h3>
-        <p>Dirbame <strong>visoje Lietuvoje</strong></p>
-        <p>Vilnius • Kaunas • Klaipėda • kiti miestai</p>
+        <h3>Vieta</h3>
+        <p><strong>Kaunas, Lietuva</strong></p>
+        <p>Dirbame visoje šalyje</p>
       </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- ================= KAINŲ PAŽADAS ================= -->
-<section class="content-section" style="background:#f7f9fc;">
-  <div class="container">
-    <div class="section-intro">
-      <h2>Kaip gausite kainą?</h2>
-      <p>
-        Rekuperacijos kaina priklauso nuo objekto tipo, ploto ir pasirinktos įrangos.
-        Todėl <strong>kiekvienam klientui parengiame individualų pasiūlymą</strong>.
-      </p>
-      <p>
-        Susisiekus – įvertiname poreikius ir pateikiame aiškų sprendimą be paslėptų kainų.
-      </p>
-    </div>
+<!-- ================= KAINŲ LOGIKA ================= -->
+<section class="content-section light-bg">
+  <div class="container section-intro">
+    <h2>Kaip nustatoma kaina?</h2>
+    <p>
+      Rekuperacijos sprendimas priklauso nuo objekto ploto, tipo ir pasirinktos įrangos.
+      Todėl kiekvienam klientui rengiame <strong>individualų pasiūlymą</strong>.
+    </p>
+    <p>Jokių paslėptų mokesčių – aiškiai ir suprantamai.</p>
   </div>
 </section>
 
 <!-- ================= FORMA ================= -->
 <section class="content-section" id="forma">
   <div class="container">
+
     <div class="section-intro">
       <h2>Gauti pasiūlymą</h2>
-      <p>Užpildykite formą – susisieksime su Jumis</p>
+      <p>Palikite kontaktus – susisieksime</p>
     </div>
 
     <form class="contact-form">
-      <input type="text" name="vardas" placeholder="Jūsų vardas" required>
-      <input type="tel" name="telefonas" placeholder="Telefono numeris" required>
-      <input type="email" name="email" placeholder="El. paštas">
-      <textarea name="zinute" placeholder="Trumpai aprašykite objektą (namas, butas, plotas)"></textarea>
+
+      <label>
+        <input type="text" name="vardas" placeholder="Jūsų vardas" required autocomplete="name">
+      </label>
+
+      <label>
+        <input type="tel" name="telefonas" placeholder="Telefono numeris" required inputmode="tel" autocomplete="tel">
+      </label>
+
+      <label>
+        <input type="email" name="email" placeholder="El. paštas" autocomplete="email">
+      </label>
+
+      <label>
+        <textarea name="zinute" placeholder="Trumpai apie objektą (namas, plotas, miestas)"></textarea>
+      </label>
+
       <button type="submit" class="btn-primary">Siųsti užklausą</button>
+
     </form>
+
   </div>
 </section>
 
 <!-- ================= ATSILIEPIMAI ================= -->
-<section class="content-section" style="background:#f7f9fc;">
+<section class="content-section light-bg">
   <div class="container">
+
     <div class="section-intro">
       <h2>Ką sako klientai?</h2>
-      <p>Realūs klientų atsiliepimai po atliktų darbų</p>
     </div>
 
     <div class="about-grid">
+
       <div class="about-item">
         <p>⭐⭐⭐⭐⭐</p>
-        <p>„Tvarkingas darbas, aiškiai paaiškino sprendimus. Rekomenduoju.“</p>
+        <p>„Tvarkingas montavimas, viskas aiškiai paaiškinta.“</p>
+        <strong>Tomas, Kaunas</strong>
       </div>
+
       <div class="about-item">
         <p>⭐⭐⭐⭐⭐</p>
-        <p>„Profesionalus montavimas, sistema veikia tyliai ir efektyviai.“</p>
+        <p>„Sistema veikia tyliai, rekomenduoju.“</p>
+        <strong>Inga, Vilnius</strong>
       </div>
+
       <div class="about-item">
         <p>⭐⭐⭐⭐⭐</p>
-        <p>„Viskas laiku, jokių staigmenų kainoje.“</p>
+        <p>„Laiku atlikti darbai, jokių staigmenų.“</p>
+        <strong>Andrius, Klaipėda</strong>
       </div>
+
     </div>
+
   </div>
 </section>
 
 <!-- ================= FINAL CTA ================= -->
 <section class="content-section">
-  <div class="container" style="text-align:center;">
+  <div class="container center">
     <h2>Turite klausimų?</h2>
-    <p>Skambinkite arba palikite užklausą – padėsime išsirinkti.</p>
+    <p>Skambinkite arba palikite užklausą</p>
     <a href="tel:+37066565321" class="btn-primary">📞 +370 665 65321</a>
   </div>
 </section>
@@ -146,29 +188,36 @@
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="container footer-flex">
+
     <div class="footer-logo">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija">
+      <img 
+        src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" 
+        alt="Oro Inžinerija logotipas"
+        loading="lazy">
     </div>
+
     <div class="footer-contact">
+      <span>📍 Kaunas, Lietuva</span>
       <span>Tel: <a href="tel:+37066565321">+370 665 65321</a></span>
       <span>Email: <a href="mailto:zydrunas.rekuperacija@gmail.com">zydrunas.rekuperacija@gmail.com</a></span>
     </div>
+
   </div>
-  <div style="text-align:center;font-size:0.9rem;color:#9ca3af;">
-    Visos teisės saugomos © 2026 Oro Inžinerija
+
+  <div class="footer-bottom">
+    © 2026 Oro Inžinerija – Visos teisės saugomos
   </div>
 </footer>
 
+<!-- ================= JS ================= -->
 <script>
 const burger = document.getElementById("burger");
 const menu = document.getElementById("main-menu");
 
-if (burger && menu) {
-  burger.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    burger.classList.toggle("open");
-  });
-}
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  burger.classList.toggle("open");
+});
 </script>
 
 </body>
