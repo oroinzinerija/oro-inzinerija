@@ -2,12 +2,13 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <title>Rekuperacijos paslaugos – Oro Inžinerija</title>
-  <meta name="description" content="Rekuperacijos paslaugos namams ir verslui: montavimas, projektavimas, konsultacijos. Kaunas, Lietuva.">
+  <title>Paslaugos – Oro Inžinerija</title>
+  <meta name="description" content="Rekuperacijos ir vėdinimo paslaugos: individualūs namai, biurai, butų kompleksai.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <!-- ================= HEADER ================= -->
@@ -15,21 +16,17 @@
   <div class="container header-flex">
 
     <a href="index.html">
-      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png"
-           alt="Oro Inžinerija"
-           class="logo-top"
-           style="height:120px;">
+      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija" class="logo-top">
     </a>
 
-    <div class="burger" id="burger">
+    <button class="burger" id="burger">
       <span></span><span></span><span></span>
-    </div>
+    </button>
 
-    <nav class="header-nav" id="main-menu">
+    <nav class="header-nav" id="menu">
       <a href="index.html">Pagrindinis</a>
-      <a href="paslaugos.html" class="active">Paslaugos</a>
-      <a href="darbai.html">Mūsų darbai</a>
-      <a href="iranga.html">Įranga</a>
+      <a href="paslaugos.html">Paslaugos</a>
+      <a href="darbai.html">Darbai</a>
       <a href="naudinga.html">Naudinga</a>
       <a href="apie.html">Apie mus</a>
       <a href="kontaktai.html" class="btn-primary">Kontaktai</a>
@@ -39,89 +36,81 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero hero-services">
+<section class="hero">
   <div class="hero-content">
-    <h1>Rekuperacijos sprendimai</h1>
-    <p>Profesionalus vėdinimas, pritaikytas Jūsų objektui</p>
+    <h1>Mūsų paslaugos</h1>
+    <p>Projektuojame, montuojame ir prižiūrime rekuperacijos sistemas</p>
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section class="content-section container">
+<section class="content-section">
+  <div class="container">
 
-  <div class="section-intro">
-    <h2>Kokiems objektams montuojame</h2>
-    <p>Dirbame tiek su privačiais, tiek su komerciniais projektais.</p>
-  </div>
+    <div class="services-list">
 
-  <div class="services-list">
-
-    <!-- 1 -->
-    <div class="service-row">
-      <img src="img/IMG_5109.png" alt="Rekuperacija individualiam namui">
-      <div class="service-text">
-        <h3>Individualus namas</h3>
-        <p>
-          Efektyvi rekuperacijos sistema su šilumos atgavimu,
-          kuri užtikrina šviežią orą, mažesnes šildymo sąnaudas
-          ir komfortą visus metus.
-        </p>
+      <!-- 1 -->
+      <div class="service-row">
+        <img src="img/IMG_5109.png" alt="Rekuperacija individualiame name">
+        <div class="service-text">
+          <h3>1. Individualus namas</h3>
+          <p>
+            Efektyvi rekuperacijos sistema su šilumos atgavimu,
+            pritaikyta individualiems poreikiams ir namo plotui.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- 2 -->
-    <div class="service-row reverse">
-      <img src="img/IMG_5110.png" alt="Rekuperacija biuro patalpoms">
-      <div class="service-text">
-        <h3>Biuro patalpos</h3>
-        <p>
-          Komfortiškas mikroklimatas darbuotojams,
-          stabilesnė oro kokybė ir energijos taupymas
-          šiuolaikinėse darbo erdvėse.
-        </p>
+      <!-- 2 -->
+      <div class="service-row reverse">
+        <img src="img/IMG_5110.png" alt="Rekuperacija biuro patalpose">
+        <div class="service-text">
+          <h3>2. Biuro patalpos</h3>
+          <p>
+            Komfortiškas mikroklimatas darbuotojams,
+            energijos taupymas ir tylus veikimas.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- 3 -->
-    <div class="service-row">
-      <img src="img/IMG_5111.png" alt="Rekuperacija butų kompleksams">
-      <div class="service-text">
-        <h3>Butų kompleksas</h3>
-        <p>
-          Individualūs sprendimai kiekvienam butui –
-          tylus veikimas, efektyvus vėdinimas ir
-          ilgaamžė sistema visam pastatui.
-        </p>
+      <!-- 3 -->
+      <div class="service-row">
+        <img src="img/IMG_5111.png" alt="Rekuperacija butų kompleksui">
+        <div class="service-text">
+          <h3>3. Butų kompleksas</h3>
+          <p>
+            Individualūs sprendimai kiekvienam butui,
+            centralizuoti arba atskiri rekuperacijos sprendimai.
+          </p>
+        </div>
       </div>
+
     </div>
 
   </div>
 </section>
 
 <!-- ================= CALCULATOR CTA ================= -->
-<section class="calculator-cta">
-  <div class="container calculator-box">
+<section id="skaiciuokle" class="content-section alt">
+  <div class="container">
 
-    <h2>Rekuperacijos kainos skaičiuoklė</h2>
-    <p class="calculator-subtitle">
-      Preliminarus pasiūlymas per <strong>1 minutę</strong>
-    </p>
+    <div class="section-intro">
+      <h2>Rekuperacijos kainos skaičiuoklė</h2>
+      <p>Preliminarus pasiūlymas per 1 minutę</p>
+    </div>
 
-    <form class="calculator-form">
-      <label>Pastato tipas</label>
+    <form class="contact-form">
+      <select required>
+        <option value="">Pastato tipas</option>
+        <option>Butas</option>
+        <option>Namas</option>
+        <option>Kotedžas</option>
+      </select>
 
-      <div class="radio-group">
-        <label><input type="radio" name="pastatas"> Butas</label>
-        <label><input type="radio" name="pastatas"> Namas</label>
-        <label><input type="radio" name="pastatas"> Kotedžas</label>
-      </div>
-
-      <button type="submit" class="btn-primary btn-large">
-        Gauti pasiūlymą
-      </button>
+      <button class="btn-primary">Gauti pasiūlymą</button>
     </form>
 
-    <p class="calculator-note">
+    <p style="text-align:center;margin-top:18px;font-size:1rem;">
       📞 Susisieksime per 1 darbo dieną
     </p>
 
@@ -132,24 +121,27 @@
 <footer class="footer">
   <div class="container footer-flex">
 
-    <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png"
-         alt="Oro Inžinerija"
-         class="logo-bottom"
-         style="height:120px;">
+    <div class="footer-logo">
+      <img src="img/1AA5AC38-3E65-4B7A-938C-8D32EE9A9C28.png" alt="Oro Inžinerija">
+    </div>
 
     <div class="footer-contact">
+      <span>📍 Kaunas, Lietuva</span>
       <span>📞 <a href="tel:+37066565321">+370 665 65321</a></span>
       <span>✉️ <a href="mailto:zydrunas.rekuperacija@gmail.com">zydrunas.rekuperacija@gmail.com</a></span>
-      <span>📍 Kaunas, Lietuva</span>
     </div>
 
   </div>
-
-  <div class="footer-copy">
-    © 2026 Oro Inžinerija. Visos teisės saugomos.
-  </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
+
 </body>
 </html>
