@@ -376,3 +376,57 @@ p {
     padding-bottom: 60px;
   }
 }
+/* === SERVICES PAGE === */
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-row img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  background: transparent;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-text {
+  max-width: 600px;
+}
+
+.service-text h3 {
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+}
+
+.service-text p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+/* === MOBILE === */
+@media (max-width: 900px) {
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-row img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
