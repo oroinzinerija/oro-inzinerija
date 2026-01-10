@@ -572,3 +572,43 @@ form .btn-primary:hover {
   background: #16a34a;
   transform: translateY(-1px);
 }
+
+/* =====================================================
+   HOTFIX #2 – SKAIČIUOKLĖS KONTRASTAS
+===================================================== */
+
+/* Skaičiuoklės tekstai */
+#skaiciuokle,
+#skaiciuokle p,
+#skaiciuokle label {
+  color: #0f172a;
+}
+
+/* Skaičiuoklės input'ai */
+#skaiciuokle input,
+#skaiciuokle select {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+/* Focus */
+#skaiciuokle input:focus,
+#skaiciuokle select:focus {
+  outline: none;
+  border-color: #1f6ae1;
+  box-shadow: 0 0 0 3px rgba(31,106,225,0.15);
+}
+
+/* Rezultatų blokas (jei yra) */
+#skaiciuokle .result,
+#skaiciuokle .total,
+#skaiciuokle .output {
+  background: #f8fafc;
+  color: #020617;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+}
