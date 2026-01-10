@@ -433,3 +433,69 @@ p {
 
   .service-row img { margin-bottom: 14px; }
 }
+
+/* =====================================================
+   HOTFIX – SKAITOMUMAS IR KONTRASTAS (NETRINANT)
+===================================================== */
+
+/* Bendras tekstas ant balto fono */
+body,
+.content-section,
+.about-item,
+.service-text p {
+  color: #334155;
+}
+
+/* Paragraph'ai – tamsesni */
+p {
+  color: #334155;
+}
+
+/* Sekcijos su šviesiu fonu */
+.content-section.alt {
+  background: #f4f6fb;
+}
+
+/* Kortelės – daugiau kontrasto */
+.about-item {
+  background: #ffffff;
+}
+
+/* Hero tekstas – švaresnis */
+.hero p {
+  color: rgba(255,255,255,0.95);
+}
+
+/* Kontaktų forma (paruošta modernizavimui) */
+form input,
+form textarea,
+form select {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #94a3b8;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #1f6ae1;
+  box-shadow: 0 0 0 3px rgba(31,106,225,0.15);
+}
+
+/* CTA mygtukas formoje */
+form button,
+form .btn-primary {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+form button:hover,
+form .btn-primary:hover {
+  background: #16a34a;
+}
